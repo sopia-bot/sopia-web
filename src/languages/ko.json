@@ -1,0 +1,46 @@
+{
+	"error": "에러",
+	"notification": "알림",
+	"warning": "경고",
+	"apply": "적용",
+	"ok": "예",
+	"no": "아니오",
+	"confirm": "확인",
+	"modify": "수정",
+	"delete": "삭제",
+	"cancel": "취소",
+	"comment": "댓글",
+	"add": "추가",
+	"please-input": "값을 입력해 주세요.",
+	"action": "동작",
+	"applying": "값을 적용합니다.",
+	"download": "다운로드",
+
+
+	"home.introduce": "당신의 스푼 방송을 더 멋지게 만들어주는 매니저 프로그램",
+	"home.download": "최신 다운로드",
+	"home.google-down": "구글 드라이브",
+	"home.use-doc": "사용 방법보기",
+	
+	"intro.good-design": "깔끔하며, 눈을 뗄 수 없는 디자인이 당신을 사로잡을 겁니다.",
+	"intro.good-design2": "디자인 뿐만 아니라 사용자 경험 측면에서도 쉽게 다가갈 수 있습니다.",
+
+	"intro.free": "엄청난 자유도를 가지고 봇의 머리를 코딩할 수 있습니다.",
+	"intro.free2": "입문 장벽이 낮은 자바스크립트는 당신이 원하는 대로 할 수 있습니다.",
+
+	"intro.spoorchat": "스푼라디오에 드디어 도네이션 기능이 추가되었습니다.",
+	"intro.spoorchat2": "스푼을 후원한 청취자의 채팅을 읽는 것으로 더 재밌는 방송을 진행할 수 있습니다.",
+	"intro.spoorchat3": "특정 텍스트를 자신의 목소리로 대신 읽어주는 시그니처 기능 또한 있습니다.",
+
+	"intro.setting": "자동 로그인 기능을 포함한 몇몇 설정은 매우 간편합니다.",
+
+	"intro.bundle": "원하는 기능만 골라 사용할 수 있는 번들 기능을 제공합니다.",
+	"intro.bundle2": "프로그램을 업데이트 하지 않아도, 번들은 업데이트 할 수 있습니다.",
+
+	"intro.comunity": "커뮤니티",
+	"intro.kakao": "스푼라디오에서 가장 큰 커뮤니티라고 생각합니다.",
+	"intro.kakao2": "100명이 넘는 사람들이 서로 질문하고 친목을 도모하며 교류합니다",
+
+	"intro.anydesk": "Anydesk를 사용하여 문제 해결에 도움을 드리고 있습니다.",
+	"intro.anydesk2": "어려운 문제는 원격으로 해결하세요!"
+}

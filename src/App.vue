@@ -12,36 +12,27 @@
 						<div style="border-right: 1.2px solid #e5e5e5">
 							<h1 class="title">
 								<router-link style="text-decoration: none" class="black--text" to="/">
-									<span class="teal--text text--darken-4">Tree Some</span> Blog
+									<span class="purple--text text--darken-4">SOPIA</span>
 								</router-link>
 							</h1>
 						</div>
 					</v-col>
 
 					<v-col>
-						<v-btn 
-							text 
-							tile 
-							@click="routeAssignUrl('/blog')"
-							color="teal darken-4">Blog</v-btn>
-						<v-btn 
-							text 
-							tile 
-							@click="routeAssignUrl('/album')"
-							color="teal darken-4">Album</v-btn>
-						<v-btn 
-							text 
-							tile 
-							@click="routeAssignUrl('/portfolio')"
-							color="teal darken-4">Portfolio</v-btn>
+						<v-btn
+							v-for="menu in menus"
+							:key="menu.route"
+							text
+							tile
+							@click="routeAssignUrl(menu.route)"
+							color="purple darken-4"> {{ menu.route }} </v-btn>
 					</v-col>
 				</v-row>
 			</v-container>
-
 			<v-container v-else style="max-width:unset" class="px-0">
 				<v-row align="center" justify="center">
 					<v-col align="center">
-						<h1 class="title"><router-link style="text-decoration: none" class="black--text" to="/">Tree Some Blog</router-link></h1>
+						<h1 class="title"><router-link style="text-decoration: none" class="black--text" to="/">SOPIA</router-link></h1>
 					</v-col>
 				</v-row>
 
@@ -55,21 +46,13 @@
 							tile 
 							@click="routeAssignUrl('/')"
 							color="teal darken-4">Home</v-btn>
-						<v-btn 
-							text 
-							tile 
-							@click="routeAssignUrl('/blog')"
-							color="teal darken-4">Blog</v-btn>
-						<v-btn 
-							text 
-							tile 
-							@click="routeAssignUrl('/album')"
-							color="teal darken-4">Album</v-btn>
-						<v-btn 
-							text 
-							tile 
-							@click="routeAssignUrl('/portfolio')"
-							color="teal darken-4">Portfolio</v-btn>
+						<v-btn
+							v-for="menu in menus"
+							:key="menu.route"
+							text
+							tile
+							@click="routeAssignUrl(menu.route)"
+							color="teal darken-4"> {{ menu.route }} </v-btn>
 					</v-col>
 					<v-col cols="1" v-if="blog" class="d-none d-sm-flex"></v-col>
 				</v-row>
@@ -119,6 +102,9 @@ export default {
 			windowWidth: 0,
 			small: this.$store.getters.small,
 			blog: false,
+			menus: [
+				{ route: 'doc' },
+			]
 		}
 	},
 	mounted() {
@@ -139,13 +125,6 @@ export default {
 		small_(val) {
 			this.small = val;
 		},
-		$route() {
-			if ( this.$route.path.match(/^\/blog/) ) {
-				this.blog = true;
-			} else {
-				this.blog = false;
-			}
-		}
 	},
 	beforeDestroy() {
 		window.removeEventListener('resize', this.getWindowWidth);

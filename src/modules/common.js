@@ -13,6 +13,18 @@ export const routeAssignUrl = function(url, _this) {
     }   
 }
 
+export const hrefChange = function(url) {
+    if ( typeof url === "string" ) { 
+		window.location.assign(url);
+    }   
+};
+
+export const openNewTab = function(url) {
+    if ( typeof url === "string" ) { 
+		window.open(url);
+    }   
+};
+
 export const reqHttpGet = function(url) {
 	return new Promise((resolve, reject) => {
 		let req = new XMLHttpRequest();
@@ -64,25 +76,3 @@ export const getPostHTML = function(path) {
 	return reqHttpGet(debugUrl + path);
 };
 
-// key:value 를 가진 오브젝트를 검색
-export const searchObject = function(obj, key, value) {
-    let keys = Object.keys(obj);
-    let len = keys.length;
-
-    if ( !value || value.trim() === "" ) return obj;
-
-    for ( let i=0;i<len;i++ ) {
-        let k = keys[i];
-        if ( k === key ) {
-            if ( obj[k] == value ) {
-                return obj;
-            }
-        }
-        if ( typeof obj[k] === "object" ) {
-            let rtn = searchObject(obj[k], key, value);
-            if ( typeof rtn === "object" ) {
-                return rtn;
-            }
-        }
-    }
-};

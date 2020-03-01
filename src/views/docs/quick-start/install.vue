@@ -1,120 +1,140 @@
 <template>
 	<v-container>
-		<v-row>
+		<v-row class="mt-6">
 			<v-col cols="0" sm="1" md="1"></v-col>
 			<v-col>
-				<h2 class="subtitle-1 gery--text">2019. 12. 01</h2>
-				<h1 class="display-1 teal--text text--darken-4">테스트 제목</h1>
+				<h1 class="display-1 purple--text text--darken-4">설치하기</h1>
+				<h2 class="subtitle-1 grey--text mt-2">설치하기</h2>
 				<v-divider class="my-6"></v-divider>
-				<div id="story">
-					<html v-html="html"> </html>
-				</div>
+				<!-- S:Download -->
+				<h1 class="headline font-weight-bold">다운로드</h1>
+				<!-- S:Sheet Card -->
+				<v-row class="mt-6">
+					<v-col>
+						<v-sheet
+							elevation="4"
+							class="mx-auto pa-6 sheet-card">
+							소피아는 가장 최신 버전을 사용하는 걸 권장하고 있습니다.<br>
+							최신 버전을 다운로드 해 주세요.
+						</v-sheet>
+					</v-col>
+				</v-row>
+				<!-- E:Sheet Card -->
+				<!-- S:Home Zip Install -->
+				<v-row class="mt-6">
+					<v-col>
+						<h1 class="title font-weight-bold mb-3">1. 홈페이지에서 다운로드</h1>
+						홈페이지는 항상 최신의 파일만 관리하고 있기 때문에 페이지에서 다운받는 것을 권장합니다.<br>
+						<br>
+						<v-btn @click="openNewTab('/SOPIA.zip')" text color="purple darken-3">다운로드 링크</v-btn>
+					</v-col>
+				</v-row>
+				<!-- E:Home Zip Install -->
+				<!-- S:Google Zip Install -->
+				<v-row class="mt-6">
+					<v-col>
+						<h1 class="title font-weight-bold mb-3">2. 구글드라이브에서 다운로드</h1>
+						구글 드라이브는 과거 버전부터 현재까지의 모든 버전을 모아두고 있습니다.<br>
+						<br>
+						<v-btn @click="openNewTab('https://drive.google.com/drive/folders/19ufWSDuN8gq6ZTgv5Qk8GjeZdD3P7NYq')" text color="yellow darken-4">다운로드 링크</v-btn>
+					</v-col>
+				</v-row>
+				<!-- E:Google Zip Install -->
+				<!-- E:Download -->
+				<v-divider class="my-6"></v-divider>
+				<!-- S:Run SOPIA -->
+				<h1 class="headline font-weight-bold">소피아 실행</h1>
+				<!-- S:Sheet Card -->
+				<v-row class="mt-6">
+					<v-col>
+						<v-sheet
+							elevation="4"
+							class="mx-auto pa-6 sheet-card">
+							소피아는 PC에서만 실행시킬 수 있습니다. Windows 시스템 기반이지만, 리눅스나 Mac OS 또한 가능합니다.<br>
+							리눅스, Mac OS 는 따로 상담 후 빌드를 해야 합니다.
+						</v-sheet>
+					</v-col>
+				</v-row>
+				<!-- E:Sheet Card -->
+				<v-row class="mt-6">
+					<v-col>
+						<h1 class="title font-weight-bold mb-3">1. 압축 해제</h1>
+						다운로드한 <code>SOPIA.zip</code> 의 내용을 한 폴더에 압축 해제합니다.<br>
+					</v-col>
+				</v-row>
+				<v-row class="mt-6">
+					<v-col>
+						<h1 class="title font-weight-bold">2. 프로그램 실행</h1>
+					</v-col>
+				</v-row>
+				<v-row>
+					<v-col align="center">
+						<v-hover class="my-12">
+							<template v-slot="{ hover }">
+								<v-card
+									max-width="600px"
+									:elevation="hover ? 24 : 6">
+									<v-img
+										src="./install/sopia-exe.gif"
+										width="100%"></v-img>
+								</v-card>
+							</template>
+						</v-hover>
+					</v-col>
+				</v-row>
+				<v-row>
+					<v-col>
+						응용프로그램 <code>SOPIA.exe</code> 를 실행시킵니다.
+					</v-col>
+				</v-row>
+				<v-row>
+					<v-col align="center">
+						<v-hover class="my-12" width="100%">
+							<template v-slot="{ hover }">
+								<v-card
+									max-width="600px"
+									:elevation="hover ? 24 : 6">
+									<v-img
+										src="./install/sopia-sign.gif"
+										width="100%"></v-img>
+								</v-card>
+							</template>
+						</v-hover>
+					</v-col>
+				</v-row>
+				<v-row>
+					<v-col>
+						위와 같은 화면이 보이면 성공입니다.
+					</v-col>
+				</v-row>
+				<!-- E:Run SOPIA -->
+
+				<!-- S:Footer -->
+				<v-divider class="mt-12 mb-3"></v-divider>
+				<v-row class="my-6">
+					<v-col align="center">
+						<p class="blue-grey--text text--lighten-3">작성자 - 개발자 윤군</p>
+					</v-col>
+				</v-row>
+				<!-- E:Footer -->
 			</v-col>
 			<v-col cols="0" sm="1" md="4"></v-col>
 		</v-row>
 	</v-container>
 </template>
 <script>
-import { getPostsJson, getPostHTML, routeAssignUrl, searchObject, getConfigJson } from '../../../modules/common.js';
-
-const scripts = [];
-
-window.onload = function() {
-	scripts.forEach(s => {
-		console.log(s);
-	});
-}
-
-const displayPost = function(_this = this) {
-	let path = _this.$route.params.path;
-
-	if ( !path || path.length === 0 ) {
-		routeAssignUrl('/blog', _this);
-	}
-
-	path = "/posts/" + path;
-
-	let posts = _this.posts;
-
-	let obj = searchObject(posts, "href", path);
-	console.log(obj, path);
-	//yyyy-mm-dd-hh-MM-ss 형식을 yyyy. mm. dd 로 변경
-	let extractDate = new RegExp(/(\d{4})-(\d{2})-(\d{2})-(\d{2})-(\d{2})-(\d{2})/);
-	let created = extractDate.exec(obj.href);
-	if ( created ) {
-		created = created[0].replace(extractDate, "$1. $2. $3");
-	}
-
-	getPostHTML(obj.href+"index.html").then(res => {
-		let html = document.createElement('html');
-		html.innerHTML = res.responseText;
-
-		let head = html.querySelector('head');
-		// css append
-		head.querySelectorAll('link').forEach(link => {
-			let newLink = document.createElement('link');
-			let attr = null;
-
-			if ( (attr = link.getAttribute('rel')) ) {
-				newLink.setAttribute('rel', attr);
-			}
-
-			if ( (attr = link.getAttribute('href')) ) {
-				newLink.setAttribute('href', attr);
-			}
-
-			document.head.appendChild(newLink);
-		});
-
-		// js append
-		head.querySelectorAll('script').forEach(script => {
-			let newScript = document.createElement('script');
-			let attr = null;
-
-			if ( (attr = script.getAttribute('src')) ) {
-				newScript.setAttribute('src', attr);
-			}
-
-			document.head.appendChild(newScript);
-		});
-
-		// body append
-		_this.html = html.querySelector('body').innerHTML;
-
-		getConfigJson().then(config => {
-			let comment = config.comment;
-			if ( comment ) {
-				let story = document.querySelector('#story');
-				let utterances = comment.utterances;
-				console.log(utterances);
-				if ( utterances ) {
-					let utter = document.createElement('script');
-					utter.src = utterances.src;
-					utter.setAttribute('repo', utterances['repo']);
-					utter.setAttribute('issue-term', utterances['issue-term']);
-					utter.setAttribute('theme', utterances['theme']);
-					utter.setAttribute('crossorigin', utterances['crossorigin']);
-					utter.async = utterances['async'];
-					story.appendChild(utter);
-				}
-			}
-		});
-	});
-}
+import { openNewTab } from '../../../modules/common.js';
 
 export default {
-	name: 'BlogCategory',
+	name: 'quick-start/install',
 	components: {
+	},
+	methods: {
+		openNewTab
 	},
 	created: function() {
 	},
 	mounted: function() {
-		/*
-		getPostsJson().then(posts => {
-			this.posts = posts;
-			displayPost(this);
-		});
-		*/
 	},
 	computed: {
 		small_() {
@@ -128,7 +148,6 @@ export default {
 	},
 	data: function() {
 		return {
-			html: '',
 			small: false,
 		}
 	}

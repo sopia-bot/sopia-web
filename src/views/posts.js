@@ -10,7 +10,11 @@ export default {
 				{
 					key: '/docs/quick-start/install',
 					name: Lang('docs.quick.install'),
-				}
+				},
+				{
+					key: '/docs/quick-start/manager',
+					name: Lang('docs.quick.manager'),
+				},
 			],
 			click: () => {},
 		}

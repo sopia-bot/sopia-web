@@ -17,6 +17,18 @@
 		</v-row>
 	</v-content>
 </template>
+<style>
+.sheet-card {
+	border-left: 6px solid #607D8B !important;
+}
+code {
+	box-shadow: unset !important;
+	color: unset !important;
+	font-weight: 300 !important;
+	font-family: unset !important;
+	padding: 3px 6px !important;
+}
+</style>
 <script>
 import Navi from './Com/navi';
 import { routeAssignUrl } from '../modules/common.js';

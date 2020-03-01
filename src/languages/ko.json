@@ -47,5 +47,6 @@
 
 
 	"docs.quick.start": "빠른 시작 안내",
-	"docs.quick.install": "설치하기"
+	"docs.quick.install": "설치하기",
+	"docs.quick.manager": "간편 매니저"
 }

@@ -37,7 +37,7 @@
 				</v-row>
 
 				<v-row align="center" justify="center">
-					<v-col cols="1" v-if="blog" class="py-0">
+					<v-col cols="1" v-if="docs" class="py-0">
 						<v-app-bar-nav-icon class="pa-0" @click="openMenu"></v-app-bar-nav-icon>
 					</v-col>
 					<v-col class="pa-2 px-0" align="center">
@@ -45,16 +45,16 @@
 							text 
 							tile 
 							@click="routeAssignUrl('/')"
-							color="teal darken-4">Home</v-btn>
+							color="purple darken-4">Home</v-btn>
 						<v-btn
 							v-for="menu in menus"
 							:key="menu.route"
 							text
 							tile
 							@click="routeAssignUrl(menu.route)"
-							color="teal darken-4"> {{ menu.route }} </v-btn>
+							color="purple darken-4"> {{ menu.route }} </v-btn>
 					</v-col>
-					<v-col cols="1" v-if="blog" class="d-none d-sm-flex"></v-col>
+					<v-col cols="1" v-if="docs" class=""></v-col>
 				</v-row>
 			</v-container>
 		</v-app-bar>
@@ -101,9 +101,9 @@ export default {
 		return {
 			windowWidth: 0,
 			small: this.$store.getters.small,
-			blog: false,
+			docs: false,
 			menus: [
-				{ route: 'doc' },
+				{ route: 'docs' },
 			]
 		}
 	},
@@ -125,6 +125,13 @@ export default {
 		small_(val) {
 			this.small = val;
 		},
+		$route() {
+			if ( this.$route.path.match(/^\/docs/) ) {
+				this.docs = true;
+			} else {
+				this.docs = false;
+			}
+		}
 	},
 	beforeDestroy() {
 		window.removeEventListener('resize', this.getWindowWidth);

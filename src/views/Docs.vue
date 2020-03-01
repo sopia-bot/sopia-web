@@ -19,7 +19,7 @@
 </template>
 <script>
 import Navi from './Com/navi';
-//import { routeAssignUrl } from '../modules/common.js';
+import { routeAssignUrl } from '../modules/common.js';
 
 export default {
 	name: 'docs',
@@ -27,6 +27,9 @@ export default {
 		Navi,
 	},
 	mounted: function() {
+		if ( this.$route.path === "/docs" ) {
+			routeAssignUrl('/docs/quick-start/install', this);
+		}
 	},
 	data: function () {
 		return {

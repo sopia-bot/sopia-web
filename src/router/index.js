@@ -1,14 +1,27 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Posts from '../views/posts.js';
 
 Vue.use(VueRouter)
 
-/*
-/blog/v/category... -> alias 를 사용하여 /blog 로 보이도록 함.
-  - /blog/v/:category
-/blog/posts/... -> 포스팅을 보여줌.
-  - /blog/posts/:post
- */
+const docsChildren = [];
+Posts.cGroupList.forEach((group) => {
+	const subGroup = group.singleSub;
+	subGroup.forEach((g) => {
+		const item = new Object();
+		item.path = g.key.replace("/docs/", "");
+		item.component = () => import('../views' + g.key + '.vue');
+		docsChildren.push(item);
+	});
+});
+Posts.cList.forEach((g) => {
+	const item = new Object();
+	item.path = g.key.replace("/docs/", "");
+	item.component = () => import('../views' + g.key + '.vue');
+	docsChildren.push(item);
+});
+
+console.log(docsChildren);
 
 const routes = [
 	{
@@ -21,12 +34,7 @@ const routes = [
 		path: '/docs',
 		name: 'Docs',
 		component: () => import('../views/Docs.vue'),
-		children: [
-			{
-				path: ':path(.*)',
-				component: () => import('../views/Docs/BlogPost.vue'),
-			},
-		],
+		children: docsChildren,
 		meta: { title: 'Vue Blog' },
 	},
 ]

@@ -9,63 +9,33 @@
 		:temporary="small"
 		:fixed="small"
 		>
-		<v-list>
-			<v-list-item two-line @click="routeAssignUrl('/blog')">
-				<v-list-item-avatar style="text-align:center">
-					<v-img src="https://avatars2.githubusercontent.com/u/28672888?v=4"></v-img>
-				</v-list-item-avatar>
-
-				<v-list-item-content @click="openGit">
-					<v-list-item-title class="teal--text text--darken-4"> Tree Some </v-list-item-title>
-					<v-list-item-subtitle> youn@tree-some.dev </v-list-item-subtitle>
-				</v-list-item-content>
-			</v-list-item>
-			<v-divider></v-divider>
 			<v-list dense>
 				<v-list-group
 					v-for="cGroup in cGroupList"
-					:key="cGroup.name"
+					:key="cGroup.key"
 					class="custom"
-					:value="small"
-					active-class="teal--text text--darken-4">
+					:value="isSelectGroup"
+					color="purple--text text--darken-4"
+					active-class="purple--text text--darken-4">
 					<template v-slot:activator>
 						<v-list-item-content>
 							<v-list-item-title class="body-2" @click="cGroup.click">{{ cGroup.name }}</v-list-item-title>
 						</v-list-item-content>
 					</template>
 
-					<v-list-group 
-						v-for="sGroup in cGroup.sub"
-						:key="sGroup.name"
-						sub-group
-						:value="small"
-						active-class="teal--text text--darken-4">
-						<template v-slot:activator>
-							<v-list-item-content>
-								<v-list-item-title class="body-2" @click="sGroup.click">{{ sGroup.name }}</v-list-item-title>
-							</v-list-item-content>
-						</template>
-
-						<v-list-item
-							v-for="ssItem in sGroup.sub"
-							:key="ssItem.name"
-							@click="ssItem.click"
-							>
-							<v-list-item-content>
-								<v-list-item-title class="body-2">{{ ssItem.name }}</v-list-item-title>
-							</v-list-item-content>
-						</v-list-item>
-					</v-list-group>
-
+					<!-- S:Sub Item -->
 					<v-list-item
 						v-for="ssingle in cGroup.singleSub"
-						:key="ssingle.name"
-						@click="ssingle.click"
+						:key="ssingle.key"
+						@click="routeAssignUrl(ssingle.key)"
+						:class="getItemClass(ssingle.key)"
+						value="true"
 						>
 						<v-list-item-content>
 							<v-list-item-title class="body-2">{{ ssingle.name }}</v-list-item-title>
 						</v-list-item-content>
 					</v-list-item>
+					<!-- E:Sub Item -->
 				</v-list-group>
 
 				<v-list-item
@@ -78,7 +48,6 @@
 					</v-list-item-content>
 				</v-list-item>
 			</v-list>
-		</v-list>
 	</v-navigation-drawer>
 </template>
 <style scoped>
@@ -107,6 +76,8 @@ aside.v-navigation-drawer.custom div.v-navigation-drawer__border {
 <script>
 import { routeAssignUrl, getPostsJson } from '../../modules/common.js';
 import EventBus from '../../modules/event-bus.js';
+import Lang from '../../languages/Lang.js';
+import Posts from '../posts.js';
 
 const buildCategoryObject = (posts, _this) => {
 	let keys = Object.keys(posts);
@@ -190,19 +161,26 @@ export default {
 	name: 'navigation',
 	methods: {
 		routeAssignUrl,
-		openGit() {
-			window.open('https://github.com/tree-some');
+		Lang,
+		getItemClass: function(key) {
+			if ( this.$route.path === key ) {
+				return "ml-6 blue-grey lighten-5";
+			}
+
+			return "ml-6";
+		},
+		isSelectGroup: function(key) {
+			const regx = new RegExp(`^${key}`);
+			if ( this.$route.path.match(regx) ) {
+				return true;
+			}
+
+			return false;
 		}
 	},
 	components: {
 	},
 	created: function (){
-		getPostsJson().then(posts => {
-			// next line is debug code
-			let category = buildCategoryObject(posts, this);
-			this.cGroupList = category.cGroupList;
-			this.cList = category.cList;
-		});
 		EventBus.$on('navi-draw', (val) => {
 			this.drawer = val;
 		});
@@ -220,33 +198,10 @@ export default {
 	data: function () {
 		return {
 			drawer: false,
-			cGroupList: [
-				{
-					name: "test", 
-					sub: [
-						{
-							name: "sub-test",
-							sub: [
-								{ name: "sub-item", click: () => {} },
-								{ name: "sub-item-2", click: () => {} },
-							],
-							click: () => {},
-						},
-					],
-					singleSub: [
-						{
-							name: "single-sub",
-							click: () => {},
-						}
-					],
-					click: () => {},
-				}
-			],
-			cList: [
-				{ name: 'single-1', click: () => {} },
-				{ name: 'single-2', click: () => {} },
-			],
+			cGroupList: Posts.cGroupList,
+			cList: Posts.cList,
 			small: this.$store.getters.small,
+			item: null,
 		}
 	},
 }

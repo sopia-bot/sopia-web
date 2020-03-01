@@ -15,7 +15,7 @@
 	</v-container>
 </template>
 <script>
-import { getPostsJson, getPostHTML, routeAssignUrl, searchObject, getConfigJson } from '../../modules/common.js';
+import { getPostsJson, getPostHTML, routeAssignUrl, searchObject, getConfigJson } from '../../../modules/common.js';
 
 const scripts = [];
 

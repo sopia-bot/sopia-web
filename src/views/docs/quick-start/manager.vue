@@ -118,7 +118,7 @@
 </template>
 <script>
 export default {
-	name: 'quick-start/install',
+	name: 'manager',
 	components: {
 	},
 	created: function() {

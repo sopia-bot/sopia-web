@@ -20,8 +20,17 @@ export default {
 					name: Lang('docs.quick.load-setting'),
 				},
 			],
-			click: () => {},
-		}
+		},
+		{
+			name: Lang('docs.menus'), 
+			key: '/docs/menus',
+			singleSub: [
+				{
+					key: '/docs/menus/home',
+					name: Lang('docs.menus.home'),
+				},
+			],
+		},
 	],
 	cList: [
 		/*

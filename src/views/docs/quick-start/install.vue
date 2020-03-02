@@ -126,7 +126,7 @@
 import { openNewTab } from '../../../modules/common.js';
 
 export default {
-	name: 'quick-start/install',
+	name: 'install',
 	components: {
 	},
 	methods: {

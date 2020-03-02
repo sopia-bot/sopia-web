@@ -119,7 +119,7 @@
 </template>
 <script>
 export default {
-	name: 'quick-start/install',
+	name: 'load-setting',
 	components: {
 	},
 	created: function() {

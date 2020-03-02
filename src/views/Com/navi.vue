@@ -14,12 +14,12 @@
 					v-for="cGroup in cGroupList"
 					:key="cGroup.key"
 					class="custom"
-					:value="isSelectGroup"
+					:value="isSelectGroup(cGroup.key)"
 					color="purple--text text--darken-4"
 					active-class="purple--text text--darken-4">
 					<template v-slot:activator>
 						<v-list-item-content>
-							<v-list-item-title class="body-2" @click="cGroup.click">{{ cGroup.name }}</v-list-item-title>
+							<v-list-item-title class="body-2">{{ cGroup.name }}</v-list-item-title>
 						</v-list-item-content>
 					</template>
 
@@ -41,7 +41,6 @@
 				<v-list-item
 					v-for="cObj in cList"
 					:key="cObj.name"
-					@click="cObj.click"
 					>
 					<v-list-item-content>
 						<v-list-item-title class="body-2">{{ cObj.name }}</v-list-item-title>

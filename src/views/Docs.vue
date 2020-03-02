@@ -23,7 +23,7 @@
 }
 code {
 	box-shadow: unset !important;
-	color: unset !important;
+	color: #4A148C !important;
 	font-weight: 300 !important;
 	font-family: unset !important;
 	padding: 3px 6px !important;

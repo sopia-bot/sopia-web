@@ -15,6 +15,10 @@ export default {
 					key: '/docs/quick-start/manager',
 					name: Lang('docs.quick.manager'),
 				},
+				{
+					key: '/docs/quick-start/load-setting',
+					name: Lang('docs.quick.load-setting'),
+				},
 			],
 			click: () => {},
 		}

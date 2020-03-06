@@ -32,21 +32,7 @@
 						</v-row>
 						<!-- E:Assign Serial -->
 						<!-- S:Picture -->
-						<v-row>
-							<v-col align="center">
-								<v-hover class="my-12">
-									<template v-slot="{ hover }">
-										<v-card
-											max-width="600px"
-											:elevation="hover ? 24 : 6">
-											<v-img
-												src="./manager/sopia-serial.gif"
-												width="100%"></v-img>
-										</v-card>
-									</template>
-								</v-hover>
-							</v-col>
-						</v-row>
+						<Picture :src="imgs.sopiaSerial" />
 						<!-- E:Picture -->
 						<!-- S:Login Spoon -->
 						<v-row class="mt-6">
@@ -57,21 +43,7 @@
 						</v-row>
 						<!-- E:Login Spoon -->
 						<!-- S:Picture -->
-						<v-row>
-							<v-col align="center">
-								<v-hover class="my-12">
-									<template v-slot="{ hover }">
-										<v-card
-											max-width="600px"
-											:elevation="hover ? 24 : 6">
-											<v-img
-												src="./manager/sopia-login.gif"
-												width="100%"></v-img>
-										</v-card>
-									</template>
-								</v-hover>
-							</v-col>
-						</v-row>
+						<Picture :src="imgs.sopiaLogin" />
 						<!-- E:Picture -->
 						<!-- S:Join Live -->
 						<v-row class="mt-6">
@@ -83,22 +55,7 @@
 						</v-row>
 						<!-- E:Join Live -->
 						<!-- S:Picture -->
-						<v-row>
-							<v-col align="center">
-								<v-hover class="my-12">
-									<template v-slot="{ hover }">
-										<v-card
-											max-width="600px"
-											:elevation="hover ? 24 : 6">
-											<v-img
-												src="./manager/sopia-welcome.gif"
-												width="100%"></v-img>
-										</v-card>
-									</template>
-								</v-hover>
-								<p class="caption">닉네임 노출 허락 받은 사진입니다.</p>
-							</v-col>
-						</v-row>
+						<Picture :src="imgs.sopiaWelcome" caption="닉네임 노출 허락받은 사진입니다." />
 						<!-- E:Picture -->
 						<!-- E:Login -->
 					</v-col>
@@ -138,6 +95,11 @@ export default {
 	data: function() {
 		return {
 			small: false,
+			imgs: {
+				"sopiaSerial": require('@/assets/docs/quick-start/manager/sopia-serial.gif'),
+				"sopiaLogin": require('@/assets/docs/quick-start/manager/sopia-login.gif'),
+				"sopiaWelcome": require('@/assets/docs/quick-start/manager/sopia-welcome.gif'),
+			},
 		}
 	}
 }

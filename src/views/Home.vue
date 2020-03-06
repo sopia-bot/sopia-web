@@ -5,7 +5,7 @@
 		<v-row align="center" class="mt-12">
 			<v-col cols="0" sm="1" md="3"></v-col>
 			<v-col align="center" class="px-12">
-				<v-img src="../assets/home/bot.png" class="mb-9" max-width="300px"></v-img>
+				<v-img :src="imgs.bot" class="mb-9" max-width="300px"></v-img>
 				<h1 class="display-3 font-weight-bold mb-5 purple--text text--darken-3">SOPIA</h1>
 				<p class="title">{{ Lang('home.introduce') }}</p>
 			</v-col>
@@ -54,18 +54,7 @@
 		<!-- S:Good Design -->
 		<v-row align="center">
 			<v-col align="center" class="pa-12" cols="12" md="6">
-				<v-hover>
-					<template v-slot="{ hover }">
-						<v-card
-							max-width="450px"
-							:elevation="hover ? 24 : 6">
-							<v-img
-								src="../assets/home/main.gif"
-								width="100%"
-								gradient="to right, rgba(0, 0, 0, 0), rgba(50, 50, 50, 0.3)"></v-img>
-						</v-card>
-					</template>
-				</v-hover>
+				<Picture :src="imgs.main" />
 			</v-col>
 			<v-col align="center" class="pa-12" cols="12" md="6">
 				<p class="title"> {{ Lang('intro.good-design') }} </p>
@@ -87,18 +76,7 @@
 				<p class="title"> {{ Lang('intro.free2') }} </p>
 			</v-col>
 			<v-col align="center" class="pa-12" cols="12" md="6">
-				<v-hover>
-					<template v-slot="{ hover }">
-						<v-card
-							max-width="450px"
-							:elevation="hover ? 24 : 6">
-							<v-img
-								src="../assets/home/free.gif"
-								width="100%"
-								gradient="to left, rgba(0, 0, 0, 0), rgba(50, 50, 50, 0.3)"></v-img>
-						</v-card>
-					</template>
-				</v-hover>
+				<Picture :src="imgs.free" />
 			</v-col>
 		</v-row>
 		<!-- E:Freedome -->
@@ -112,18 +90,7 @@
 		<!-- S:Spoorchat -->
 		<v-row align="center">
 			<v-col align="center" class="pa-12" cols="12" md="6">
-				<v-hover>
-					<template v-slot="{ hover }">
-						<v-card
-							max-width="450px"
-							:elevation="hover ? 24 : 6">
-							<v-img
-								src="../assets/home/spoorchat.gif"
-								width="100%"
-								gradient="to left, rgba(0, 0, 0, 0), rgba(50, 50, 50, 0.3)"></v-img>
-						</v-card>
-					</template>
-				</v-hover>
+				<Picture :src="imgs.spoorchat" />
 			</v-col>
 			<v-col align="center" class="pa-12" cols="12" md="6">
 				<p class="title"> {{ Lang('intro.spoorchat') }} </p>
@@ -145,18 +112,7 @@
 				<p class="title"> {{ Lang('intro.setting') }} </p>
 			</v-col>
 			<v-col align="center" class="pa-12" cols="12" md="6">
-				<v-hover>
-					<template v-slot="{ hover }">
-						<v-card
-							max-width="450px"
-							:elevation="hover ? 24 : 6">
-							<v-img
-								src="../assets/home/setting.gif"
-								width="100%"
-								gradient="to left, rgba(0, 0, 0, 0), rgba(50, 50, 50, 0.3)"></v-img>
-						</v-card>
-					</template>
-				</v-hover>
+				<Picture :src="imgs.setting" />
 			</v-col>
 		</v-row>
 		<!-- E:Setting -->
@@ -170,18 +126,7 @@
 		<!-- S:Bundle -->
 		<v-row align="center" class="mb-12">
 			<v-col align="center" class="pa-12" cols="12" md="6">
-				<v-hover>
-					<template v-slot="{ hover }">
-						<v-card
-							max-width="450px"
-							:elevation="hover ? 24 : 6">
-							<v-img
-								src="../assets/home/bundle.gif"
-								width="100%"
-								gradient="to left, rgba(0, 0, 0, 0), rgba(50, 50, 50, 0.3)"></v-img>
-						</v-card>
-					</template>
-				</v-hover>
+				<Picture :src="imgs.bundle" />
 			</v-col>
 			<v-col align="center" class="pa-12" cols="12" md="6">
 				<p class="title"> {{ Lang('intro.bundle') }} </p>
@@ -189,7 +134,7 @@
 			</v-col>
 		</v-row>
 		<!-- E:Bundle -->
-		<v-img src="../assets/home/kakao.gif" class="custom" max-height="700px">
+		<v-img :src="imgs.kakao" class="custom" max-height="700px">
 			<v-content class="pa-0">
 				<v-row align="center" style="height:700px">
 					<v-col cols="12" align="center">
@@ -218,18 +163,7 @@
 					color="red darken-3"> {{ Lang('download') }} </v-btn>
 			</v-col>
 			<v-col align="center" class="pa-12" cols="12" md="6">
-				<v-hover>
-					<template v-slot="{ hover }">
-						<v-card
-							max-width="600px"
-							:elevation="hover ? 24 : 6">
-							<v-img
-								src="../assets/home/anydesk.png"
-								width="100%"
-								gradient="to left, rgba(0, 0, 0, 0), rgba(50, 50, 50, 0.3)"></v-img>
-						</v-card>
-					</template>
-				</v-hover>
+				<Picture :src="imgs.anydesk" />
 			</v-col>
 		</v-row>
 		<!-- E:Anydesk -->
@@ -262,30 +196,19 @@ export default {
 		openNewTab,
 		hrefChange,
 		Lang,
-		submit () {
-		},
-		clear () {
-			this.title = '';
-			this.email = '';
-			this.content = '';
-		}
 	},
 	data: function() {
 		return {
-			valid: true,
-			title: '',
-			titleRules: [
-				v => !!v || 'Title is required',
-			],
-			email: '',
-			emailRules: [
-				v => !!v || 'E-mail is required',
-				v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
-			],
-			content: '',
-			contentRules: [
-				v => !!v || 'Content is required',
-			]
+			imgs: {
+				"bot": require('@/assets/home/bot.png'),
+				"main": require('@/assets/home/main.gif'),
+				"free": require('@/assets/home/free.gif'),
+				"spoorchat": require('@/assets/home/spoorchat.gif'),
+				"setting": require('@/assets/home/setting.gif'),
+				"bundle": require('@/assets/home/bundle.gif'),
+				"kakao": require('@/assets/home/kakao.gif'),
+				"anydesk": require('@/assets/home/anydesk.png'),
+			},
 		};
 	},
 }

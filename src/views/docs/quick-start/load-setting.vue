@@ -24,25 +24,11 @@
 					</v-col>
 				</v-row>
 				<!-- S:Picture -->
-				<v-row>
-					<v-col align="center">
-						<v-hover class="my-12">
-							<template v-slot="{ hover }">
-								<v-card
-									max-width="600px"
-									:elevation="hover ? 24 : 6">
-									<v-img
-										src="./load-setting/find-file.png"
-										width="100%"></v-img>
-								</v-card>
-							</template>
-						</v-hover>
-					</v-col>
-				</v-row>
+				<Picture :src="imgs.findFile" />
 				<!-- E:Picture -->
 				<v-row class="mt-6">
 					<v-col>
-						SETTING 탭 > SOPIA 설정 > 설정 불러오기를 클릭합니다.
+						SETTING 탭 &gt; SOPIA 설정 &gt; 설정 불러오기를 클릭합니다.
 					</v-col>
 				</v-row>
 				<!-- E:Click Load Setting -->
@@ -53,21 +39,7 @@
 					</v-col>
 				</v-row>
 				<!-- S:Picture -->
-				<v-row>
-					<v-col align="center">
-						<v-hover class="my-12">
-							<template v-slot="{ hover }">
-								<v-card
-									max-width="600px"
-									:elevation="hover ? 24 : 6">
-									<v-img
-										src="./load-setting/prev-ver-folder.png"
-										width="100%"></v-img>
-								</v-card>
-							</template>
-						</v-hover>
-					</v-col>
-				</v-row>
+				<Picture :src="imgs.prevVerFolder" />
 				<!-- E:Picture -->
 				<v-row class="mt-6">
 					<v-col>
@@ -82,21 +54,7 @@
 					</v-col>
 				</v-row>
 				<!-- S:Picture -->
-				<v-row>
-					<v-col align="center">
-						<v-hover class="my-12">
-							<template v-slot="{ hover }">
-								<v-card
-									max-width="600px"
-									:elevation="hover ? 24 : 6">
-									<v-img
-										src="./load-setting/success-load.png"
-										width="100%"></v-img>
-								</v-card>
-							</template>
-						</v-hover>
-					</v-col>
-				</v-row>
+				<Picture :src="imgs.successLoad" />
 				<!-- E:Picture -->
 				<v-row class="mt-6">
 					<v-col>
@@ -139,6 +97,11 @@ export default {
 	data: function() {
 		return {
 			small: false,
+			imgs: {
+				"findFile": require('@/assets/docs/quick-start/load-setting/find-file.png'),
+				"prevVerFolder": require('@/assets/docs/quick-start/load-setting/prev-ver-folder.png'),
+				"successLoad": require('@/assets/docs/quick-start/load-setting/success-load.png'),
+			},
 		}
 	}
 }

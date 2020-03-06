@@ -67,41 +67,13 @@
 						<h1 class="title font-weight-bold">2. 프로그램 실행</h1>
 					</v-col>
 				</v-row>
-				<v-row>
-					<v-col align="center">
-						<v-hover class="my-12">
-							<template v-slot="{ hover }">
-								<v-card
-									max-width="600px"
-									:elevation="hover ? 24 : 6">
-									<v-img
-										src="./install/sopia-exe.gif"
-										width="100%"></v-img>
-								</v-card>
-							</template>
-						</v-hover>
-					</v-col>
-				</v-row>
+				<Picture :src="imgs.sopiaExe" />
 				<v-row>
 					<v-col>
 						응용프로그램 <code>SOPIA.exe</code> 를 실행시킵니다.
 					</v-col>
 				</v-row>
-				<v-row>
-					<v-col align="center">
-						<v-hover class="my-12" width="100%">
-							<template v-slot="{ hover }">
-								<v-card
-									max-width="600px"
-									:elevation="hover ? 24 : 6">
-									<v-img
-										src="./install/sopia-sign.gif"
-										width="100%"></v-img>
-								</v-card>
-							</template>
-						</v-hover>
-					</v-col>
-				</v-row>
+				<Picture :src="imgs.sopiaSign" />
 				<v-row>
 					<v-col>
 						위와 같은 화면이 보이면 성공입니다.
@@ -149,6 +121,10 @@ export default {
 	data: function() {
 		return {
 			small: false,
+			imgs: {
+				"sopiaExe": require('@/assets/docs/quick-start/install/sopia-exe.gif'),
+				"sopiaSign": require('@/assets/docs/quick-start/install/sopia-sign.gif'),
+			},
 		}
 	}
 }

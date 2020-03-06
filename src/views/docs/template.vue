@@ -26,7 +26,7 @@
 </template>
 <script>
 export default {
-	name: 'quick-start/install',
+	name: 'template',
 	components: {
 	},
 	created: function() {

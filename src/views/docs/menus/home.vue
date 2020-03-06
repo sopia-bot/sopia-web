@@ -16,24 +16,7 @@
 						</v-sheet>
 					</v-col>
 				</v-row>
-				<!-- S:Picture -->
-				<v-row>
-					<v-col align="center">
-						<v-hover class="my-12">
-							<template v-slot="{ hover }">
-								<v-card
-									max-width="600px"
-									:elevation="hover ? 24 : 6">
-									<v-img
-										src="./home/live-info.gif"
-										width="100%"></v-img>
-								</v-card>
-							</template>
-						</v-hover>
-						<p class="caption">닉네임 노출 허락 받은 사진입니다.</p>
-					</v-col>
-				</v-row>
-				<!-- E:Picture -->
+				<Picture :src="imgs.liveInfo" caption="닉네임 노출을 허락받은 사진입니다." max-width="600px" />
 				<v-row class="mt-6">
 					<v-col>
 						라이브 및 디제이 정보가 화면에 표시되며, 오른쪽 텍스트를 클릭하면 클립보드에 복사됩니다.
@@ -43,23 +26,7 @@
 
 				<v-divider class="my-6"></v-divider>
 				<h1 class="headline font-weight-bold">2. Console</h1>
-				<!-- S:Picture -->
-				<v-row>
-					<v-col align="center">
-						<v-hover class="my-12">
-							<template v-slot="{ hover }">
-								<v-card
-									max-width="600px"
-									:elevation="hover ? 24 : 6">
-									<v-img
-										src="./home/console-ex.gif"
-										width="100%"></v-img>
-								</v-card>
-							</template>
-						</v-hover>
-					</v-col>
-				</v-row>
-				<!-- E:Picture -->
+				<Picture :src="imgs.consoleEx"/>
 				<v-row class="mt-6">
 					<v-col>
 						<code>Console</code> 은 자바스크립트 콘솔창입니다.<br>
@@ -104,6 +71,10 @@ export default {
 	data: function() {
 		return {
 			small: false,
+			imgs: {
+				'liveInfo': require('@/assets/docs/menus/home/live-info.gif'),
+				'consoleEx': require('@/assets/docs/menus/home/console-ex.gif'),
+			}
 		}
 	}
 }

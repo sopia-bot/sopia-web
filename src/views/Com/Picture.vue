@@ -44,7 +44,6 @@ export default {
 	methods: {
 	},
 	mounted: function() {
-		console.log(this.src);
 	},
 	data: function() {
 		return {

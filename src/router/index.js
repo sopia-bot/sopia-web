@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Posts from '../views/posts.js';
+import goTo from 'vuetify/es5/services/goto';
 
 Vue.use(VueRouter)
 
@@ -20,8 +21,6 @@ Posts.cList.forEach((g) => {
 	item.component = () => import('../views' + g.key + '.vue');
 	docsChildren.push(item);
 });
-
-console.log(docsChildren);
 
 const routes = [
 	{

@@ -19,6 +19,10 @@ export default {
 					key: '/docs/quick-start/load-setting',
 					name: Lang('docs.quick.load-setting'),
 				},
+				{
+					key: '/docs/quick-start/spoor-chat',
+					name: Lang('docs.quick.spoor-chat'),
+				},
 			],
 		},
 		{

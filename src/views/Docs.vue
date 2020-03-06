@@ -21,6 +21,10 @@
 .sheet-card {
 	border-left: 6px solid #607D8B !important;
 }
+.flow-card {
+	width: 350px;
+	max-width: 80%;
+}
 code {
 	box-shadow: unset !important;
 	color: #4A148C !important;

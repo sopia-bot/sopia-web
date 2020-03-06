@@ -52,5 +52,6 @@
 	"docs.quick.load-setting": "설정 불러오기",
 
 	"docs.menus": "프로그램 메뉴 안내",
-	"docs.menus.home": "HOME"
+	"docs.menus.home": "HOME",
+	"docs.menus.code": "CODE"
 }

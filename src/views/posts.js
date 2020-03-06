@@ -29,6 +29,10 @@ export default {
 					key: '/docs/menus/home',
 					name: Lang('docs.menus.home'),
 				},
+				{
+					key: '/docs/menus/code',
+					name: Lang('docs.menus.code'),
+				},
 			],
 		},
 	],

@@ -48,8 +48,6 @@ export default {
 	data: function() {
 		return {
 			dialog: false,
-			dialogWidth: "0",
-			dialogHeight:"0",
 		};
 	},
 }

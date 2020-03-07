@@ -54,5 +54,6 @@
 
 	"docs.menus": "프로그램 메뉴 안내",
 	"docs.menus.home": "HOME",
-	"docs.menus.code": "CODE"
+	"docs.menus.code": "CODE",
+	"docs.menus.spoor-chat": "Spoor Chat"
 }

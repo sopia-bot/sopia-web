@@ -37,6 +37,10 @@ export default {
 					key: '/docs/menus/code',
 					name: Lang('docs.menus.code'),
 				},
+				{
+					key: '/docs/menus/spoor-chat',
+					name: Lang('docs.menus.spoor-chat'),
+				},
 			],
 		},
 	],

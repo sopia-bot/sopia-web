@@ -27,14 +27,13 @@ const routes = [
 		path: '/',
 		name: 'Home',
 		component: () => import('../views/Home.vue'),
-		meta: { title: 'Vue Blog' },
 	},
 	{
 		path: '/docs',
 		name: 'Docs',
 		component: () => import('../views/Docs.vue'),
 		children: docsChildren,
-		meta: { title: 'Vue Blog' },
+		redirect: '/docs/quick-start/install'
 	},
 ]
 

@@ -25,7 +25,7 @@
 							text
 							tile
 							@click="routeAssignUrl(menu.route)"
-							color="purple darken-4"> {{ menu.route }} </v-btn>
+							color="purple darken-4"> {{ menu.name }} </v-btn>
 					</v-col>
 				</v-row>
 			</v-container>
@@ -52,7 +52,7 @@
 							text
 							tile
 							@click="routeAssignUrl(menu.route)"
-							color="purple darken-4"> {{ menu.route }} </v-btn>
+							color="purple darken-4"> {{ menu.name }} </v-btn>
 					</v-col>
 					<v-col cols="1" v-if="docs" class=""></v-col>
 				</v-row>
@@ -103,7 +103,7 @@ export default {
 			small: this.$store.getters.small,
 			docs: false,
 			menus: [
-				{ route: 'docs' },
+				{ route: '/docs', name: 'docs' },
 			]
 		}
 	},

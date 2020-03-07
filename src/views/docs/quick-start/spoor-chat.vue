@@ -33,7 +33,7 @@
 					<v-col>
 						사용하는 것은 매우 쉽습니다. Spoor Chat 탭에서 사용하기를 활성시켜준 뒤 Save를 누르면 즉시 적용됩니다.
 
-						<!-- 사진 넣을거임 -->
+						<Picture :src="imgs.enable" />
 					</v-col>
 				</v-row>
 				<v-divider class="my-6"></v-divider>
@@ -43,30 +43,7 @@
 						기본적으로 1스푼으로 지정되어 있지만, 많이 받다보면 방송 진행에 어려움이 있을 수 있습니다.<br>
 						요구하는 스푼의 개수를 지정한 후 Save를 누르면 즉시 적용되어 해당 스푼 이상을 선물받았을 때만 동작합니다.
 
-						<!-- 사진 넣을거임 -->
-					</v-col>
-				</v-row>
-				<v-divider class="my-6"></v-divider>
-				<h1 class="headline font-weight-bold">시그니처란?</h1>
-				<v-row class="mt-6">
-					<v-col>
-						특정 단어에 대하여 DJ 본인의 음성을 등록해 두면, 해당 단어의 Spoor Chat은 음성합성 시스템이 아닌 등록한 음성이 재생됩니다.
-						<!-- 사진 넣을거임 -->
-					</v-col>
-				</v-row>
-				<v-divider class="my-6"></v-divider>
-				<h1 class="headline font-weight-bold">시그니처 등록하기</h1>
-				<v-row class="mt-6">
-					<v-col>
-						Spoor Signature 우측 하단 + 버튼을 눌러 <code>mp3</code> 또는 <code>base64</code> 확장자 파일을 선택할 수 있습니다.
-						<!-- 사진 넣을거임 -->
-
-						아니면 마이크 모양 버튼을 눌러 즉석에서 녹음할 수 있습니다.
-						<!-- 사진 넣을거임 -->
-
-						시그니처 텍스트를 입력하고 등록을 누르면 추가됩니다.
-						이후 꼭 Save를 눌러 적용시켜야 등록한 시그니처가 적용됩니다.
-						<!-- 사진 넣을거임 -->
+						<Picture :src="imgs.minSpoon" />
 					</v-col>
 				</v-row>
 
@@ -108,6 +85,10 @@ export default {
 	data: function() {
 		return {
 			small: false,
+			imgs: {
+				enable: require('@/assets/docs/quick-start/spoor-chat/enable.gif'),
+				minSpoon: require('@/assets/docs/quick-start/spoor-chat/min-spoon.gif')
+			}
 		}
 	}
 }

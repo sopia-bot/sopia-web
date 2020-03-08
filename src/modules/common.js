@@ -76,3 +76,21 @@ export const getPostHTML = function(path) {
 	return reqHttpGet(debugUrl + path);
 };
 
+export const getContent = function(element) {
+	if ( !element ) {
+		element = document.querySelector('#router-view>main');
+	}
+
+	return element.innerText.slice(0, 160);
+};
+
+export const mkKeyword = function(words) {
+	const defaultKeywords = [
+		"SOPIA",
+		"소피아",
+		"스푼 매니저",
+		"스푼 봇",
+	];
+
+	return defaultKeywords.concat(words).join(", ");
+};

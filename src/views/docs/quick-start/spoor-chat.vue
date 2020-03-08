@@ -63,9 +63,39 @@
 	</v-container>
 </template>
 <script>
-import { openNewTab } from '../../../modules/common.js';
+import { openNewTab, mkKeyword } from '../../../modules/common.js';
+import Lang from '../../../languages/Lang.js';
 
 export default {
+	metaInfo: {
+		title: Lang('meta.docs.q.spoor-chat'),
+		htmlAttrs: {
+			lang: navigator.language,
+			dir: 'ltr'
+		},
+		meta: [
+			{ charset: 'utf-8' },
+			{ meta: 'description', content: Lang('meta.docs.q.spoor-chat.desc'), vmid: 'description' },
+			{ name: 'keywords', content: mkKeyword(["봇 사용법", "스푼 라디오 매니저 사용법", "스푼 도네이션", "스푼 도네"]) },
+			{ name: 'author', content: Lang('author') },
+			{
+				property: 'og:title',
+				content: Lang('meta.docs.q.spoor-chat'),
+				vmid: 'og:title'
+			},
+			{
+				property: 'og:description',
+				content: Lang('meta.docs.q.spoor-chat.desc'),
+				vmid: 'og:description',
+			},
+			{
+				property: 'og:image',
+				content: require('@/assets/docs/quick-start/spoor-chat/enable.gif'),
+				vmid: 'og:image',
+			},
+			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+		],
+	},
 	name: 'spoor-chat',
 	components: {
 	},

@@ -77,7 +77,38 @@
 	</v-container>
 </template>
 <script>
+import { mkKeyword } from '../../../modules/common.js';
+import Lang from '../../../languages/Lang.js';
 export default {
+	metaInfo: {
+		title: Lang('meta.docs.load-setting'),
+		htmlAttrs: {
+			lang: navigator.language,
+			dir: 'ltr'
+		},
+		meta: [
+			{ charset: 'utf-8' },
+			{ meta: 'description', content: Lang('meta.docs.load-setting.desc'), vmid: 'description' },
+			{ name: 'keywords', content: mkKeyword(["봇 사용법", "스푼 라디오 매니저 사용법", "설정 불러오기"]) },
+			{ name: 'author', content: Lang('author') },
+			{
+				property: 'og:title',
+				content: Lang('meta.docs.load-setting'),
+				vmid: 'og:title'
+			},
+			{
+				property: 'og:description',
+				content: Lang('meta.docs.load-setting.desc'),
+				vmid: 'og:description',
+			},
+			{
+				property: 'og:image',
+				content: require('@/assets/docs/quick-start/load-setting/success-load.png'),
+				vmid: 'og:image',
+			},
+			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+		],
+	},
 	name: 'load-setting',
 	components: {
 	},

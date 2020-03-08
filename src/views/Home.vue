@@ -183,10 +183,39 @@ div.row {
 </style>
 <script>
 import Footer from './Com/footer';
-import { routeAssignUrl, hrefChange, openNewTab } from '../modules/common.js';
+import { routeAssignUrl, hrefChange, openNewTab, getContent, mkKeyword } from '../modules/common.js';
 import Lang from '../languages/Lang.js';
 
 export default {
+	metaInfo: {
+		title: Lang('meta.home'),
+		htmlAttrs: {
+			lang: navigator.language,
+			dir: 'ltr'
+		},
+		meta: [
+			{ charset: 'utf-8' },
+			{ meta: 'description', content: "No.1 매니저 소피아. 스푼 라디오 No.1 매니저 봇 소피아를 사용해 보세요. 당신의 스푼 방송을 더 멋지게 만들어주는 매니저 프로그램입니다.", vmid: 'description' },
+			{ name: 'keywords', content: mkKeyword() },
+			{ name: 'author', content: Lang('author') },
+			{
+				property: 'og:title',
+				content: Lang('meta.home'),
+				vmid: 'og:title'
+			},
+			{
+				property: 'og:description',
+				content: Lang('meta.home.desc'),
+				vmid: 'og:description',
+			},
+			{
+				property: 'og:image',
+				content: require('@/assets/home/bot.png'),
+				vmid: 'og:image',
+			},
+			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+		],
+	},
 	name: 'home',
 	components: {
 		Footer

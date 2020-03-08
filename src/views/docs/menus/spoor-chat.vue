@@ -58,7 +58,39 @@
 	</v-container>
 </template>
 <script>
+import { mkKeyword } from '../../../modules/common.js';
+import Lang from '../../../languages/Lang.js';
+
 export default {
+	metaInfo: {
+		title: Lang('meta.docs.m.spoor-chat'),
+		htmlAttrs: {
+			lang: navigator.language,
+			dir: 'ltr'
+		},
+		meta: [
+			{ charset: 'utf-8' },
+			{ meta: 'description', content: Lang('meta.docs.m.spoor-chat.desc'), vmid: 'description' },
+			{ name: 'keywords', content: mkKeyword(["봇 사용법", "스푼 라디오 매니저 사용법", "도네이션", "스푼 도네", "스푼 시그니처", "시그니처"]) },
+			{ name: 'author', content: Lang('author') },
+			{
+				property: 'og:title',
+				content: Lang('meta.docs.m.spoor-chat'),
+				vmid: 'og:title'
+			},
+			{
+				property: 'og:description',
+				content: Lang('meta.docs.m.spoor-chat.desc'),
+				vmid: 'og:description',
+			},
+			{
+				property: 'og:image',
+				content: require('@/assets/docs/menus/spoor-chat/signature-added.gif'),
+				vmid: 'og:image',
+			},
+			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+		],
+	},
 	name: 'spoor-chat-menu',
 	components: {
 	},

@@ -95,9 +95,39 @@
 	</v-container>
 </template>
 <script>
-import { openNewTab } from '../../../modules/common.js';
+import { openNewTab, mkKeyword } from '../../../modules/common.js';
+import Lang from '../../../languages/Lang.js';
 
 export default {
+	metaInfo: {
+		title: Lang('meta.docs.install'),
+		htmlAttrs: {
+			lang: navigator.language,
+			dir: 'ltr'
+		},
+		meta: [
+			{ charset: 'utf-8' },
+			{ meta: 'description', content: Lang('meta.docs.install.desc'), vmid: 'description' },
+			{ name: 'keywords', content: mkKeyword(["설치", "소피아 설치", "소피아 다운", "스푼 매니저 프로그램 다운", "스푼 봇 다운"]) },
+			{ name: 'author', content: Lang('author') },
+			{
+				property: 'og:title',
+				content: Lang('meta.docs.install'),
+				vmid: 'og:title'
+			},
+			{
+				property: 'og:description',
+				content: Lang('meta.docs.install.desc'),
+				vmid: 'og:description',
+			},
+			{
+				property: 'og:image',
+				content: require('@/assets/docs/quick-start/install/sopia-sign.gif'),
+				vmid: 'og:image',
+			},
+			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+		],
+	},
 	name: 'install',
 	components: {
 	},

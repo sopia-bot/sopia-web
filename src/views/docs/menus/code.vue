@@ -102,8 +102,39 @@
 	</v-container>
 </template>
 <script>
+import { mkKeyword } from '../../../modules/common.js';
+import Lang from '../../../languages/Lang.js';
 
 export default {
+	metaInfo: {
+		title: Lang('meta.docs.code'),
+		htmlAttrs: {
+			lang: navigator.language,
+			dir: 'ltr'
+		},
+		meta: [
+			{ charset: 'utf-8' },
+			{ meta: 'description', content: Lang('meta.docs.code.desc'), vmid: 'description' },
+			{ name: 'keywords', content: mkKeyword(["봇 사용법", "스푼 라디오 매니저 사용법"]) },
+			{ name: 'author', content: Lang('author') },
+			{
+				property: 'og:title',
+				content: Lang('meta.docs.code'),
+				vmid: 'og:title'
+			},
+			{
+				property: 'og:description',
+				content: Lang('meta.docs.code.desc'),
+				vmid: 'og:description',
+			},
+			{
+				property: 'og:image',
+				content: require('@/assets/home/bot.png'),
+				vmid: 'og:image',
+			},
+			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+		],
+	},
 	name: 'menus-code',
 	components: {
 	},
@@ -125,9 +156,6 @@ export default {
 	data: function() {
 		return {
 			small: false,
-			imgs: {
-				test: require('@/assets/docs/menus/home/console-ex.gif')
-			},
 			select: "",
 			flows: [
 				{ key: 'main', content: 'main.js 호출', type: 'msg' },

@@ -35,7 +35,14 @@ const routes = [
 		children: docsChildren,
 		redirect: '/docs/quick-start/install'
 	},
+	{
+		path: '/sitemap',
+		name: 'Sitemap',
+		component: () => import('../views/sitemap.vue'),
+	}
 ]
+
+localStorage.setItem('routes', JSON.stringify(routes));
 
 const router = new VueRouter({
 	mode: 'history',

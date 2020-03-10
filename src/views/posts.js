@@ -63,6 +63,10 @@ export default {
 					key: '/docs/bundle/loop',
 					name: Lang('docs.bundle.loop'),
 				},
+				{
+					key: '/docs/bundle/signature',
+					name: Lang('docs.bundle.signature'),
+				},
 			],
 		},
 	],

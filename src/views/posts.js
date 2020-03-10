@@ -41,6 +41,24 @@ export default {
 					key: '/docs/menus/spoor-chat',
 					name: Lang('docs.menus.spoor-chat'),
 				},
+				{
+					key: '/docs/menus/setting',
+					name: Lang('docs.menus.setting'),
+				},
+				{
+					key: '/docs/menus/bundle',
+					name: Lang('docs.menus.bundle'),
+				},
+			],
+		},
+		{
+			name: Lang('docs.bundle'), 
+			key: '/docs/bundle',
+			singleSub: [
+				{
+					key: '/docs/bundle/onoff',
+					name: Lang('docs.bundle.onoff'),
+				},
 			],
 		},
 	],

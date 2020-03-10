@@ -59,6 +59,10 @@ export default {
 					key: '/docs/bundle/onoff',
 					name: Lang('docs.bundle.onoff'),
 				},
+				{
+					key: '/docs/bundle/loop',
+					name: Lang('docs.bundle.loop'),
+				},
 			],
 		},
 	],

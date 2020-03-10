@@ -5,6 +5,8 @@
 			<v-col>
 				<h1 class="display-1 purple--text text--darken-4">Spoor Chat</h1>
 				<h2 class="subtitle-1 grey--text mt-2">스푼라디오에서 도네이션 사용하기</h2>
+				<v-divider class="my-6"></v-divider>
+
 				<v-row class="mt-6">
 					<v-col>
 						<v-sheet
@@ -16,7 +18,6 @@
 					</v-col>
 				</v-row>
 
-				<v-divider class="my-6"></v-divider>
 				<h1 class="headline font-weight-bold">시그니처란?</h1>
 				<v-row class="mt-6">
 					<v-col>

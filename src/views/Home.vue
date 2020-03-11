@@ -36,7 +36,7 @@
 					x-large
 					dark
 					class="teal darken-3 mx-6"
-					@click="routeAssignUrl('/docs')"
+					@click="routeAssignUrl('/docs/')"
 					elevation="15">
 					{{ Lang('home.use-doc') }}
 				</v-btn>

@@ -44,7 +44,7 @@ export default {
 	},
 	mounted: function() {
 		if ( this.$route.path === "/docs" ) {
-			routeAssignUrl('/docs/quick-start/install', this);
+			routeAssignUrl('/docs/quick-start/install/', this);
 		}
 	},
 	data: function () {

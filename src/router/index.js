@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Posts from '../views/posts.js';
 import goTo from 'vuetify/es5/services/goto';
+import path from 'path';
 
 Vue.use(VueRouter)
 
@@ -11,16 +12,23 @@ Posts.cGroupList.forEach((group) => {
 	subGroup.forEach((g) => {
 		const item = new Object();
 		item.path = g.key.replace("/docs/", "");
-		item.component = () => import('../views' + g.key + '.vue');
+		item.component = () => import('../views' + g.key.replace(/\/$/, "") + '.vue');
+		item.pathToRegexpOptions = {
+			strict: true,
+		};
 		docsChildren.push(item);
 	});
 });
 Posts.cList.forEach((g) => {
 	const item = new Object();
 	item.path = g.key.replace("/docs/", "");
-	item.component = () => import('../views' + g.key + '.vue');
+	item.component = () => import('../views' + g.key.replace(/\/$/, "") + '.vue');
+	item.pathToRegexpOptions = {
+		strict: true,
+	};
 	docsChildren.push(item);
 });
+console.log(docsChildren);
 
 const routes = [
 	{
@@ -33,7 +41,7 @@ const routes = [
 		name: 'Docs',
 		component: () => import('../views/Docs.vue'),
 		children: docsChildren,
-		redirect: '/docs/quick-start/install'
+		redirect: '/docs/quick-start/install/'
 	},
 	{
 		path: '/sitemap',

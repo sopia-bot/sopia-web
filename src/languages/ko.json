@@ -118,5 +118,6 @@
 	"docs.bundle.vote": "투표",
 
 	"docs.api": "API 가이드",
-	"docs.api.start": "시작하기"
+	"docs.api.start": "시작하기",
+	"docs.api.var": "Var 객체"
 }

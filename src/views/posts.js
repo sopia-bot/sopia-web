@@ -85,6 +85,10 @@ export default {
 					key: '/docs/api/start/',
 					name: Lang('docs.api.start'),
 				},
+				{
+					key: '/docs/api/var/',
+					name: Lang('docs.api.var'),
+				},
 			],
 		},
 	],

@@ -71,6 +71,10 @@ export default {
 					key: '/docs/bundle/song-request/',
 					name: Lang('docs.bundle.song-request'),
 				},
+				{
+					key: '/docs/bundle/vote/',
+					name: Lang('docs.bundle.vote'),
+				},
 			],
 		},
 	],

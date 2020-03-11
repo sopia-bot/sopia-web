@@ -13,7 +13,7 @@
 							elevation="4"
 							class="mx-auto pa-6 sheet-card">
 							이 문서에선 <code>CODE</code> 탭의 설명만 진행합니다.<br>
-							상세한 프로그래밍 방법은 API DOC 을 참고하세요.
+							상세한 프로그래밍 방법은 <router-link to="/docs/api/start/" class="blue-grey--text">API DOC</router-link> 을 참고하세요.
 						</v-sheet>
 					</v-col>
 				</v-row>

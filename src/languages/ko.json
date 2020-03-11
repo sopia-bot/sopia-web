@@ -62,6 +62,12 @@
 	"meta.docs.bundle.vote": "투표 | 소피아 번들",
 	"meta.docs.bundle.vote.desc": "!신청곡 명령어로 현재 신청곡 목록을 확인할 수 있습니다.  !신청곡 [신청할 곡 이름] 명령어로 신청곡을 목록에 추가할 수 있습니다.  !신청곡 삭제 또는 !신청곡 제거 명령어로 가장 마지막에 추가된 신청곡을 제거할 수 있습니다. ",
 
+	"meta.docs.api.start": "시작 | API 가이드",
+	"meta.docs.api.start.desc": "사전 지식 소피아는 프로그래밍 언어 중 하나인 Javascript 를 사용했습니다. API 가이드에선 프로그래밍에 관한 설명은 없으며, 오로지 소피아가 지원하는 객체와 그 사용법에 대해서만 설명합니다. 자바스크립트 가이드는 MDN 을 참고하십시오.",
+
+
+
+
 	"home.introduce": "당신의 스푼 방송을 더 멋지게 만들어주는 매니저 프로그램",
 	"home.download": "최신 다운로드",
 	"home.google-down": "구글 드라이브",
@@ -103,10 +109,14 @@
 	"docs.menus.spoor-chat": "SPOOR CHAT",
 	"docs.menus.setting": "SETTING",
 	"docs.menus.bundle": "BUNDLE",
+
 	"docs.bundle": "번들 안내",
 	"docs.bundle.onoff": "OnOff",
 	"docs.bundle.loop": "반복",
 	"docs.bundle.signature": "시그니처",
 	"docs.bundle.song-request": "신청곡",
-	"docs.bundle.vote": "투표"
+	"docs.bundle.vote": "투표",
+
+	"docs.api": "API 가이드",
+	"docs.api.start": "시작하기"
 }

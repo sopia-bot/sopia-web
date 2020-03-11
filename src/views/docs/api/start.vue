@@ -3,18 +3,17 @@
 		<v-row class="mt-6">
 			<v-col cols="0" sm="1" md="1"></v-col>
 			<v-col>
-				<h1 class="display-1 purple--text text--darken-4">시그니처</h1>
-				<h2 class="subtitle-1 grey--text mt-2">현재 등록된 시그니처 텍스트 목록 확인</h2>
+				<h1 class="display-1 purple--text text--darken-4">소피아 API 시작하기</h1>
+				<h2 class="subtitle-1 grey--text mt-2">세상에서 가장 똑똑하고 일 잘하는 매니저 만들기</h2>
 				<v-divider class="my-6"></v-divider>
-				<Picture :src="imgs.list" />
+				<h1 class="headline font-weight-bold">사전 지식</h1>
+				<Picture :src="imgs.nodejs" />
 				<v-row>
 					<v-col>
-						시그니처는 <router-link class="blue-grey--text" to="/docs/quick-start/spoor-chat/">Spoor Chat</router-link>에서 부가적으로 본인이 등록해야 하는 것을,
-						똑똑한 여러분이라면 이미 이전 글을 읽어서 알고 계실겁니다.<br>
-						시그니처 번들은 등록된 시그니처 목록을 보여주는 <code>!시그니처</code> 명령어를 추가합니다.
+					<p>소피아는 프로그래밍 언어 중 하나인 Javascript 를 사용했습니다. API 가이드에선 프로그래밍에 관한 설명은 없으며, 오로지 소피아가 지원하는 객체와 그 사용법에 대해서만 설명합니다.</p>
+					<p>자바스크립트 가이드는 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/" target="_blink" class="blue-grey--text">MDN</a> 을 참고하십시오.</p>
 					</v-col>
 				</v-row>
-				<Picture :src="imgs.cmd" />
 				<!-- S:Footer -->
 				<v-divider class="mt-12 mb-3"></v-divider>
 				<v-row class="my-6">
@@ -34,35 +33,35 @@ import Lang from '../../../languages/Lang.js';
 
 export default {
 	metaInfo: {
-		title: Lang('meta.docs.bundle.signature'),
+		title: Lang('meta.docs.api.start'),
 		htmlAttrs: {
 			lang: navigator.language,
 			dir: 'ltr'
 		},
 		meta: [
 			{ charset: 'utf-8' },
-			{ meta: 'description', content: Lang('meta.docs.bundle.signature.desc'), vmid: 'description' },
-			{ name: 'keywords', content: mkKeyword(["봇 사용법", "스푼 라디오 매니저 사용법", "번들", "signature", "도네이션", "도네", "시그니처"]) },
+			{ meta: 'description', content: Lang('meta.docs.api.start.desc'), vmid: 'description' },
+			{ name: 'keywords', content: mkKeyword(["봇 사용법", "스푼 라디오 매니저 사용법", "api"]) },
 			{ name: 'author', content: Lang('author') },
 			{
 				property: 'og:title',
-				content: Lang('meta.docs.bundle.signature'),
+				content: Lang('meta.docs.api.start'),
 				vmid: 'og:title'
 			},
 			{
 				property: 'og:description',
-				content: Lang('meta.docs.bundle.signature.desc'),
+				content: Lang('meta.docs.api.start.desc'),
 				vmid: 'og:description',
 			},
 			{
 				property: 'og:image',
-				content: require('@/assets/docs/bundle/signature/signature-list.gif'),
+				content: require('@/assets/home/bot.png'),
 				vmid: 'og:image',
 			},
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 		],
 	},
-	name: 'bundle.signature',
+	name: 'api.start',
 	components: {
 	},
 	created: function() {
@@ -83,8 +82,7 @@ export default {
 		return {
 			small: false,
 			imgs: {
-				cmd: require('@/assets/docs/bundle/signature/signature-cmd.gif'),
-				list: require('@/assets/docs/bundle/signature/signature-list.gif'),
+				nodejs: require('@/assets/docs/api/start/nodejs.png'),
 			}
 		}
 	}

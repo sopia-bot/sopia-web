@@ -77,6 +77,16 @@ export default {
 				},
 			],
 		},
+		{
+			name: Lang('docs.api'), 
+			key: '/docs/api',
+			singleSub: [
+				{
+					key: '/docs/api/start/',
+					name: Lang('docs.api.start'),
+				},
+			],
+		},
 	],
 	cList: [
 		/*

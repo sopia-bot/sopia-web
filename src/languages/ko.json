@@ -56,6 +56,8 @@
 	"meta.docs.bundle.signature": "시그니처 | 소피아 번들",
 	"meta.docs.bundle.signature.desc": "시그니처는 에서 부가적으로 본인이 등록해야 하는 것을, 똑똑한 여러분이라면 이미 이전 글을 읽어서 알고 계실겁니다.  시그니처 번들은 등록된 시그니처 목록을 보여주는 !시그니처 명령어를 추가합니다.",
 
+	"meta.docs.bundle.song-request": "신청곡 | 소피아 번들",
+	"meta.docs.bundle.song-request.desc": "!신청곡 명령어로 현재 신청곡 목록을 확인할 수 있습니다.  !신청곡 [신청할 곡 이름] 명령어로 신청곡을 목록에 추가할 수 있습니다.  !신청곡 삭제 또는 !신청곡 제거 명령어로 가장 마지막에 추가된 신청곡을 제거할 수 있습니다. ",
 
 	"home.introduce": "당신의 스푼 방송을 더 멋지게 만들어주는 매니저 프로그램",
 	"home.download": "최신 다운로드",
@@ -101,5 +103,6 @@
 	"docs.bundle": "번들 안내",
 	"docs.bundle.onoff": "OnOff",
 	"docs.bundle.loop": "반복",
-	"docs.bundle.signature": "시그니처"
+	"docs.bundle.signature": "시그니처",
+	"docs.bundle.song-request": "신청곡"
 }

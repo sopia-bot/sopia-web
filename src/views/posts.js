@@ -67,6 +67,10 @@ export default {
 					key: '/docs/bundle/signature/',
 					name: Lang('docs.bundle.signature'),
 				},
+				{
+					key: '/docs/bundle/song-request/',
+					name: Lang('docs.bundle.song-request'),
+				},
 			],
 		},
 	],

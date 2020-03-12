@@ -17,17 +17,46 @@
 				</v-row>
 				<v-row>
 					<v-col>
-						<code class="teal--text text--darken-4">
-							<span class="title font-weight-bold py-0">
-								sopia.var :<span class="font-weight-regular">Object</span>
-							</span>
-						</code>
+						<p>
+							<code class="teal--text text--darken-4">
+								<span class="title font-weight-bold py-0">
+									sopia.var :<span class="font-weight-regular">Object</span>
+								</span>
+							</code>
+						</p>
 
-						<code class="black--text">
-							<span class="body-1 font-weight-bold">sopia.live</span>
-						</code>
+						<p>
+							<code class="black--text">
+								<span class="body-1 font-weight-bold">sopia.var.live</span>
+							</code>
+							현재 라이브 정보
+						</p>
+
+						<p>
+							<code class="black--text">
+								<span class="body-1 font-weight-bold">sopia.var.created</span>
+							</code>
+							현재 라이브 시작 시간 (UTC)
+						</p>
+
+						<p>
+							<code class="black--text">
+								<span class="body-1 font-weight-bold">sopia.var._send_</span>
+							</code>
+							<code class="ml-3">sopia.send</code> 함수와 동일
+						</p>
+
 					</v-col>
 				</v-row>
+
+				<v-divider class="my-6"></v-divider>
+				<h1 class="headline font-weight-bold mb-3">사용 예제</h1>
+				<p>다음 예제는 <code>!before</code> 명령어를 쳤을 때 이전에 채팅을 쳤었던 청취자의 닉네임을 알려주는 예제입니다.</p>
+
+				<vue-embed-gist
+					gist-id="1a8f0176b6c6defd4ccaa4b2ebdcec3a"
+					file="api.var.ex-1.js"></vue-embed-gist>
+
 				<!-- S:Footer -->
 				<v-divider class="mt-12 mb-3"></v-divider>
 				<v-row class="my-6">
@@ -41,9 +70,43 @@
 		</v-row>
 	</v-container>
 </template>
+<style>
+</style>
 <script>
+import { mkKeyword } from '../../../modules/common.js';
+import Lang from '../../../languages/Lang.js';
+
 export default {
-	name: 'template',
+	metaInfo: {
+		title: Lang('meta.docs.api.var'),
+		htmlAttrs: {
+			lang: navigator.language,
+			dir: 'ltr'
+		},
+		meta: [
+			{ charset: 'utf-8' },
+			{ meta: 'description', content: Lang('meta.docs.api.var.desc'), vmid: 'description' },
+			{ name: 'keywords', content: mkKeyword(["봇 사용법", "스푼 라디오 매니저 사용법", "api", "var", "변수"]) },
+			{ name: 'author', content: Lang('author') },
+			{
+				property: 'og:title',
+				content: Lang('meta.docs.api.var'),
+				vmid: 'og:title'
+			},
+			{
+				property: 'og:description',
+				content: Lang('meta.docs.api.var.desc'),
+				vmid: 'og:description',
+			},
+			{
+				property: 'og:image',
+				content: require('@/assets/home/bot.png'),
+				vmid: 'og:image',
+			},
+			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+		],
+	},
+	name: 'api.var',
 	components: {
 	},
 	created: function() {

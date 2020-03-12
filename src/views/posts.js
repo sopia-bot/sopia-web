@@ -86,6 +86,10 @@ export default {
 					name: Lang('docs.api.start'),
 				},
 				{
+					key: '/docs/api/sopia/',
+					name: Lang('docs.api.sopia'),
+				},
+				{
 					key: '/docs/api/var/',
 					name: Lang('docs.api.var'),
 				},

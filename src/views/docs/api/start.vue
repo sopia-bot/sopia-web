@@ -16,15 +16,6 @@
 				</v-row>
 
 
-				<v-divider class="my-6"></v-divider>
-				<h1 class="headline font-weight-bold">소피아 객체</h1>
-				<v-row>
-					<v-col>
-						<p>모든 API 는 <code>sopia</code> 객체에서 지원합니다. 해당 객체는 <a href="https://nodejs.org/api/events.html" target="_blink" class="blue-grey--text">EventEmitter</a> 입니다.</p>
-					</v-col>
-				</v-row>
-
-
 
 				<!-- S:Footer -->
 				<v-divider class="mt-12 mb-3"></v-divider>

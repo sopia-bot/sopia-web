@@ -18,6 +18,8 @@
 	</v-content>
 </template>
 <style>
+@import url("https://github.githubassets.com/assets/gist-embed-4ac6018bcc05457cde2f66d2e7299d11.css");
+
 .sheet-card {
 	border-left: 6px solid #607D8B !important;
 }
@@ -32,6 +34,35 @@ code {
 	font-family: unset !important;
 	padding: 3px 6px !important;
 }
+
+@media screen and (max-width: 960px) {
+	.gist {
+		margin: 2rem 1rem;
+		box-shadow: 5px 5px 10px 1px #afafaf;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	.gist {
+		margin: 2rem 3rem;
+		box-shadow: 5px 5px 10px 1px #afafaf;
+	}
+}
+
+@media screen and (min-width: 1264px) {
+	.gist {
+		margin: 2rem 4rem;
+		box-shadow: 5px 5px 10px 1px #afafaf;
+	}
+}
+
+@media screen and (min-width: 1680px) {
+	.gist {
+		margin: 2rem 5rem;
+		box-shadow: 5px 5px 10px 1px #afafaf;
+	}
+}
+
 </style>
 <script>
 import Navi from './Com/navi';

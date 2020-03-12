@@ -74,6 +74,9 @@
 	"meta.docs.api.config": "Config 객체 | API 가이드",
 	"meta.docs.api.config.desc": "Config 객체 소피아 설정 sopia.config : Object Object sopia 소피아 설정 정보 하위 변수 Autostart Boolean 소피아 자동 시작 Onlymanager Boolean 매니저일때만 매니저 멘트 작동 Limitoff Boolean 소피아 글자수 제한 넘어갈 시 100글자씩 나누어 전송", 
 
+	"meta.docs.api.itv": "Itv 객체 | API 가이드",
+	"meta.docs.api.itv.desc": " Itv 객체 일정 시간마다 반복 작업 수행 sopia.itv : Object Function add 반복 작업 추가 파라미터 Key String 반복 작업 이름 Func Function 반복 작업을 수행할 함수 Time Number 반복 시간 ( Ms 단위 )", 
+
 
 	"home.introduce": "당신의 스푼 방송을 더 멋지게 만들어주는 매니저 프로그램",
 	"home.download": "최신 다운로드",

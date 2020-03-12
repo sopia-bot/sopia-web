@@ -93,6 +93,14 @@ export default {
 					key: '/docs/api/var/',
 					name: Lang('docs.api.var'),
 				},
+				{
+					key: '/docs/api/config/',
+					name: Lang('docs.api.config'),
+				},
+				{
+					key: '/docs/api/itv/',
+					name: Lang('docs.api.itv'),
+				},
 			],
 		},
 	],

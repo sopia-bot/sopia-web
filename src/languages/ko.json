@@ -71,6 +71,8 @@
 	"meta.docs.api.var": "Var 객체 | API 가이드",
 	"meta.docs.api.var.desc": "해당 객체는 코드 리로딩 ( F5, 번들 설치 ) 발생시 초기화되는 객체입니다.  sopia.var :Object sopia.var.live 현재 라이브 정보 sopia.var.created 현재 라이브 시작 시간 (UTC) sopia.var._send_sopia.send 함수와 동일 사용 예제 다음 예제는 !before", 
 
+	"meta.docs.api.config": "Config 객체 | API 가이드",
+	"meta.docs.api.config.desc": "Config 객체 소피아 설정 sopia.config : Object Object sopia 소피아 설정 정보 하위 변수 Autostart Boolean 소피아 자동 시작 Onlymanager Boolean 매니저일때만 매니저 멘트 작동 Limitoff Boolean 소피아 글자수 제한 넘어갈 시 100글자씩 나누어 전송", 
 
 
 	"home.introduce": "당신의 스푼 방송을 더 멋지게 만들어주는 매니저 프로그램",
@@ -125,5 +127,7 @@
 	"docs.api": "API 가이드",
 	"docs.api.start": "시작하기",
 	"docs.api.sopia": "Sopia 객체",
-	"docs.api.var": "Var 객체"
+	"docs.api.var": "Var 객체",
+	"docs.api.config": "Config 객체",
+	"docs.api.itv": "Itv 객체"
 }

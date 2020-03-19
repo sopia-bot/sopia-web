@@ -47,7 +47,12 @@ const routes = [
 		path: '/sitemap',
 		name: 'Sitemap',
 		component: () => import('../views/sitemap.vue'),
-	}
+	},
+	{
+		path: '/signin/',
+		name: 'Sign In',
+		component: () => import('../views/SignIn.vue'),
+	},
 ]
 
 localStorage.setItem('routes', JSON.stringify(routes));

@@ -131,6 +131,7 @@
 								<v-text-field
 									label="@고유 닉네임"
 									v-model="djtag"
+									disabled
 									color="purple darken-4"
 									single-line></v-text-field>
 							</v-col>
@@ -167,6 +168,7 @@
 								<v-text-field
 									label="@고유 닉네임"
 									v-model="acctag"
+									disabled
 									color="purple darken-4"
 									single-line></v-text-field>
 							</v-col>
@@ -299,8 +301,39 @@ main.v-content.custom > div.v-content__wrap > div.row {
 }
 </style>
 <script>
+import { mkKeyword } from '@/modules/common.js';
+import Lang from '@/languages/Lang.js';
 
 export default {
+	metaInfo: {
+		title: "소피아 시리얼 발급",
+		htmlAttrs: {
+			lang: navigator.language,
+			dir: 'ltr'
+		},
+		meta: [
+			{ charset: 'utf-8' },
+			{ meta: 'description', content: "소피아를 사용하기 위해 시리얼을 발급하십시오.", vmid: 'description' },
+			{ name: 'keywords', content: mkKeyword() },
+			{ name: 'author', content: Lang('author') },
+			{
+				property: 'og:title',
+				content: "소피아 시리얼 발급",
+				vmid: 'og:title'
+			},
+			{
+				property: 'og:description',
+				content: "소피아를 사용하기 위해 시리얼을 발급하십시오.",
+				vmid: 'og:description',
+			},
+			{
+				property: 'og:image',
+				content: require('@/assets/home/bot.png'),
+				vmid: 'og:image',
+			},
+			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+		],
+	},
 	name: 'signin',
 	mounted: function() {
 	},

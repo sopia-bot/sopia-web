@@ -58,6 +58,11 @@ const routes = [
 		name: 'Release Note',
 		component: () => import('../views/Note.vue'),
 	},
+	{
+		path: '/refresh-key/',
+		name: 'Refresh Serial Key',
+		component: () => import('../views/RefKey.vue'),
+	},
 ]
 
 localStorage.setItem('routes', JSON.stringify(routes));

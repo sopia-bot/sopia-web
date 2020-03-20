@@ -90,6 +90,13 @@ export const mkKeyword = function(words) {
 		"소피아",
 		"스푼 매니저",
 		"스푼 봇",
+		"스푼",
+		"스푼 라디오",
+		"매니저",
+		"매크로",
+		"스푼 매크로",
+		"스푼 윤군",
+		"스푼 개발자 윤군",
 	];
 
 	return defaultKeywords.concat(words).join(", ");

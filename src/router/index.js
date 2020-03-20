@@ -53,6 +53,11 @@ const routes = [
 		name: 'Sign In',
 		component: () => import('../views/SignIn.vue'),
 	},
+	{
+		path: '/release/',
+		name: 'Release Note',
+		component: () => import('../views/Note.vue'),
+	},
 ]
 
 localStorage.setItem('routes', JSON.stringify(routes));

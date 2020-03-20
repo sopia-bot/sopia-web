@@ -103,7 +103,8 @@ export default {
 			small: this.$store.getters.small,
 			docs: false,
 			menus: [
-				{ route: '/docs', name: 'docs' },
+				{ route: '/docs/', name: 'docs' },
+				{ route: '/release/', name: 'note' },
 			]
 		}
 	},

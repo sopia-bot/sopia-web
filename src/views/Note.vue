@@ -1,0 +1,67 @@
+<template>
+	<v-content>
+		<v-row style="overflow: auto; height:100%; width:100%; margin:0;">
+			<v-col cols="0" sm="1" md="3"></v-col>
+			<v-col style="overflow: auto;">
+				<v-row v-for="(note, i) in notes" :key="note.title">
+					<v-col>
+						<a class="name-tag" :href="'#' + note.ver" :name="note.ver">
+							<span>{{ note.title }}</span>
+						</a>
+						<br>
+						<br>
+						<p v-for="(patch, idx) in note.patchs" :key="patch" class="ml-10">
+							- {{ patch }}
+						</p>
+					</v-col>
+				</v-row>
+			</v-col>
+		</v-row>
+	</v-content>
+</template>
+<style scoped>
+.name-tag:hover::before {
+	content: "#";
+	color: #311B92;
+	margin-right: 5px;
+	border: none;
+}
+.name-tag:hover {
+	margin-left: 10.5px;
+	border: none;
+}
+.name-tag {
+	margin-left: 35px;
+	color: #37474F;
+	font-size: 2rem;
+	outline: none;
+	border: none;
+	text-decoration: none;
+}
+.name-tag > span:hover {
+	border-bottom: 2px solid #37474F;
+	outline: none;
+}
+</style>
+<script>
+import { routeAssignUrl } from '@/modules/common.js';
+import notes from './notes.js';
+
+export default {
+	name: 'release-note',
+	components: {
+	},
+	mounted: function() {
+		console.log(this.$route);
+		if ( this.$route.hash.length > 0 ) {
+			document.querySelector(`a[href="${this.$route.hash}"]`).click();
+			document.body.click();
+		}
+	},
+	data: function () {
+		return {
+			notes,
+		}
+	}
+}
+</script>

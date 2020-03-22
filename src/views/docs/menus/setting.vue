@@ -19,6 +19,9 @@
 						<br>
 						<h2 class="title">3. 설정 불러오기</h2>
 						<p>설정 불러오기에 대한 설명은 <router-link to="/docs/quick-start/load-setting" class="blue-grey--text">이곳</router-link>을 참고하세요.</p>
+						<br>
+						<h2 class="title">4. 기본 스푼 Url</h2>
+						<p>이 기능은 해외 거주 사용자를 위한 기능입니다. 거주 지역 서버로 자동 접속이 되면 <code>https://spooncast.net/kr</code>로 저장 후 소피아를 재시작 하면 됩니다.</p>
 					</v-col>
 				</v-row>
 

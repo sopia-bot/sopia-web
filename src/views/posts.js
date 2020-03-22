@@ -75,6 +75,14 @@ export default {
 					key: '/docs/bundle/vote/',
 					name: Lang('docs.bundle.vote'),
 				},
+				{
+					key: '/docs/bundle/now-song/',
+					name: Lang('docs.bundle.now-song'),
+				},
+				{
+					key: '/docs/bundle/minigame/',
+					name: Lang('docs.bundle.minigame'),
+				},
 			],
 		},
 		{

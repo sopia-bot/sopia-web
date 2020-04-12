@@ -8,6 +8,10 @@ export default {
 			key: '/docs/quick-start',
 			singleSub: [
 				{
+					key: '/docs/quick-start/how-to-sign/',
+					name: Lang('docs.quick.how-to-sign'),
+				},
+				{
 					key: '/docs/quick-start/install/',
 					name: Lang('docs.quick.install'),
 				},

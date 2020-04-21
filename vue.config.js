@@ -9,6 +9,9 @@ if ( process.argv[2] === "build" ) {
 		indexPath: path.join(__dirname, 'dist', 'index.html'),
 		routes: [
 			"/",
+			"/signin/",
+			"/refresh-key/",
+			"/release/",
 			"/docs/quick-start/install/",
 			"/docs/quick-start/manager/",
 			"/docs/quick-start/load-setting/",
@@ -23,6 +26,8 @@ if ( process.argv[2] === "build" ) {
 			"/docs/bundle/signature/",
 			"/docs/bundle/song-request/",
 			"/docs/bundle/vote/",
+			"/docs/bundle/now-song/",
+			"/docs/bundle/minigame/",
 			"/docs/api/start/",
 			"/docs/api/sopia/",
 			"/docs/api/var/",

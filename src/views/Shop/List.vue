@@ -52,6 +52,9 @@ div.row {
 .get-num input {
     text-align: right;
 }
+.v-image__image.v-image__image--cover {
+	background-size: contain;
+}
 </style>
 <script>
 import Footer from '../Com/footer';
@@ -114,7 +117,6 @@ export default {
 	data() {
 		return {
 			imgs: {
-				"hood": require('@/assets/shop/hood.png'),
 			},
             items: [
                 {
@@ -124,9 +126,29 @@ export default {
                     ],
                     key: "band",
                     title: "실리콘 팔찌",
-                    price: "4,000",
+                    price: "4000",
                     num: 0,
                 },
+				{
+					imgs: [
+						require('@/assets/shop/hood.png'),
+					],
+					key: "hood",
+					title: "후드 집업 (25장 한정)",
+					price: "39000",
+					num: 0,
+				},
+				{
+					imgs: [
+						require('@/assets/shop/galaxyS9P.gif'),
+						require('@/assets/shop/galaxyS20.gif'),
+						require('@/assets/shop/iPhoneX.gif'),
+					],
+					key: "iphone",
+					title: "핸드폰 케이스",
+					price: "25000",
+					num: 0,
+				},
             ],
 		};
 	},

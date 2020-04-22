@@ -1,5 +1,12 @@
 export default [
 	{
+		title: '소피아 1.3.2',
+		ver: '1.3.2',
+		patchs: [
+			'자주 팅기는 문제 일부 수정',
+		],
+	},
+	{
 		title: '소피아 1.3.1',
 		ver: '1.3.1',
 		patchs: [

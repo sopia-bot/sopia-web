@@ -3,7 +3,7 @@
 		v-model="dialog">
 		<!-- S:Picture -->
 		<template v-slot:activator="{ on }">
-			<v-row>
+			<v-row :class="rowClass">
 				<v-col align="center">
 					<v-hover class="my-12">
 						<template v-slot="{ hover }">
@@ -38,7 +38,7 @@ div.v-dialog {
 <script>
 export default {
 	name: 'Picture',
-	props: ['maxWidth', 'src', 'caption'],
+	props: ['maxWidth', 'src', 'caption', 'rowClass'],
 	components: {
 	},
 	methods: {

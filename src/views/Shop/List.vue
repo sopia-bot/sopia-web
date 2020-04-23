@@ -16,7 +16,7 @@
                         <v-sheet
                             color="transparent"
                             height="100%">
-                            <v-img :src="img" height="100%"></v-img>
+                            <Picture rowClass="custom" :src="img"/>
                         </v-sheet>
                     </v-carousel-item>
                 </v-carousel>
@@ -24,17 +24,36 @@
 				<h1 class="display-1 font-weight-bold mb-2 purple--text text--darken-3">
                     {{ item.title }}
                 </h1>
-                <span class="title black--text">{{ item.price }}</span>
+                <h2 v-if="item.desc && item.desc.length > 0 " class="subtitle-2 grey--text">
+                    {{ item.desc }}
+                </h2>
+                <span class="title black--text">{{ numberWithCommas(item.price) }}</span>
                 <v-text-field
                     v-model="item.num"
-                    type="number"
+                    type="text"
+                    @keydown="numKeyDown"
                     class="get-num"
                     style="width: 100px;"
                     label="개수"
+                    color="purple darken-4"
                     prepend-icon="mdi-minus"
                     @click:prepend="decrement(item)"
                     append-outer-icon="mdi-plus"
                     @click:append-outer="increment(item)"></v-text-field>
+
+                <v-autocomplete
+                    v-if="item.options.length > 0"
+                    v-model="item.option"
+                    :items="item.options"
+                    color="purple darken-4"
+                    style="max-width: 200px;"
+                    label="옵션" />
+
+                <v-btn
+                    color="purple darken-3"
+                    dark
+                    large
+                    >장바구니에 담기</v-btn>
 			</v-col>
 			<v-col cols="0" sm="1" md="3"></v-col>
 		</v-row>
@@ -50,10 +69,24 @@ div.row {
 	margin-right:unset;
 }
 .get-num input {
-    text-align: right;
+    text-align: center;
 }
 .v-image__image.v-image__image--cover {
 	background-size: contain;
+}
+
+.custom.row,
+.custom .col,
+.custom .v-card,
+.custom .v-responsive.v-image {
+    height: 100%;
+    margin: 0;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.custom .v-responsive.v-image {
+    background-color: white;
 }
 </style>
 <script>
@@ -102,7 +135,28 @@ export default {
 		openNewTab,
 		hrefChange,
 		Lang,
+        numKeyDown (evt) {
+            if ( evt.key.match(/[0-9]/) ) {
+                return;
+            }
+            switch ( evt.keyCode ) {
+                case 8: // backspace
+                    return;
+            }
+
+            if ( evt.ctrlKey ) {
+                return;
+            }
+            evt.preventDefault();
+        },
         increment (item) {
+            if ( item.key === "hood" && item.num >= 1 ) {
+                item.num = 1;
+                return;
+            }
+            if ( typeof item.num !== "number" ) {
+                item.num = 0;
+            }
             item.num = parseInt(item.num,10) + 1
         },
         decrement (item) {
@@ -110,9 +164,11 @@ export default {
                 item.num = parseInt(item.num,10) - 1;
             }
         },
+        numberWithCommas(x) {
+            return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+        },
 	},
     mounted() {
-        console.log(this.items);
     },
 	data() {
 		return {
@@ -127,15 +183,27 @@ export default {
                     key: "band",
                     title: "실리콘 팔찌",
                     price: "4000",
+                    option: 0,
+                    options: [],
                     num: 0,
                 },
 				{
 					imgs: [
 						require('@/assets/shop/hood.png'),
+						require('@/assets/shop/hood-size.png'),
 					],
 					key: "hood",
-					title: "후드 집업 (25장 한정)",
+					title: "남여 공용 후드 집업 (25장 한정)",
+                    desc: "해당 항목은 1인당 1벌만 구매 가능합니다.",
 					price: "39000",
+                    option: 0,
+                    options: [
+                        'S',
+                        'M',
+                        'L',
+                        'XL',
+                        '2XL',
+                    ],
 					num: 0,
 				},
 				{
@@ -147,6 +215,8 @@ export default {
 					key: "iphone",
 					title: "핸드폰 케이스",
 					price: "25000",
+                    option: 0,
+                    options: [],
 					num: 0,
 				},
             ],

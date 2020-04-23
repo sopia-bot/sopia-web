@@ -9,7 +9,8 @@
                     cycle
                     height="400"
                     hide-delimiter-background
-                    show-arrows-on-hover>
+                    show-arrows
+                    :show-arrows-on-hover="!small">
                     <v-carousel-item
                         v-for="(img, idx) in item.imgs"
                         :key="img.title + '-img-' + idx">
@@ -53,12 +54,83 @@
                     color="purple darken-3"
                     dark
                     large
+                    @click="addCartItem(item)"
                     >장바구니에 담기</v-btn>
 			</v-col>
 			<v-col cols="0" sm="1" md="3"></v-col>
 		</v-row>
 		<!-- E:Introduce -->
-		<Footer/>
+
+		<Footer class="mt-12"/>
+
+        <v-navigation-drawer
+            v-if="drawer || !small"
+            :temporary="small"
+            fixed
+            right
+            permanent>
+            <template v-slot:prepend>
+                <v-list-item>
+                    <v-list-item-content>
+                        <v-list-item-title class="mt-4 headline mb-1">
+                            <v-icon>mdi-cart-outline</v-icon>
+                            장바구니
+                        </v-list-item-title>
+                    </v-list-item-content>
+                    <v-list-icon v-if="small">
+                        <v-btn icon @click="drawer = false">
+                            <v-icon color="red">mdi-close</v-icon>
+                        </v-btn>
+                    </v-list-icon>
+                </v-list-item>
+            </template>
+
+            <v-divider />
+
+            <v-list style="margin-bottom: 56px;">
+                <v-list-item
+                    v-for="(item, idx) in cart"
+                    :key="'cart-' + item.key + new Date().getTime().toString()">
+                    <v-list-item-content>
+                        <v-list-item-title>{{ item.title }}</v-list-item-title>
+                        <v-list-item-subtitle>
+                            <span v-if="item.option">{{ item.option }}, </span>
+                            {{ item.num }} {{ item.unit }}
+                        </v-list-item-subtitle>
+                    </v-list-item-content>
+                    <v-list-item-icon @click="delCartItem(item, idx)">
+                        <v-btn icon>
+                            <v-icon>mdi-close</v-icon>
+                        </v-btn>
+                    </v-list-item-icon>
+                </v-list-item>
+            </v-list>
+
+            <div 
+                style="bottom: 0; position: fixed; width: 100%; background-color: white;">
+                <v-divider />
+                <v-row>
+                    <v-col cols="8">
+                        <h1 class="headline">
+                            {{ numberWithCommas(getTotalCartPrice()) }} 원
+                        </h1>
+                    </v-col>
+                    <v-col cols="4" class="text-right">
+                        <v-btn text color="purple darken-4" @click="buy">구매</v-btn>
+                    </v-col>
+                </v-row>
+            </div>
+        </v-navigation-drawer>
+        <v-snackbar
+            v-model="snackbar"
+            top
+            >
+            {{ snackText }}
+            <v-btn
+                color="pink"
+                text
+                @click="snackbar = false">Close</v-btn>
+        </v-snackbar>
 	</v-content>
 	<!-- E:Content -->
 </template>
@@ -93,6 +165,9 @@ div.row {
 import Footer from '../Com/footer';
 import { routeAssignUrl, hrefChange, openNewTab, getContent, mkKeyword } from '@/modules/common.js';
 import Lang from '@/languages/Lang.js';
+import EventBus from '@/modules/event-bus.js';
+
+const OBJdump = (obj) => Object.assign( Object.create( Object.getPrototypeOf(obj)), obj);
 
 export default {
 /*
@@ -167,13 +242,57 @@ export default {
         numberWithCommas(x) {
             return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
         },
+        addCartItem(item) {
+            if ( item.num > 0 ) {
+                this.cart.push(OBJdump(item));
+                item.num = 0;
+                item.option = 0;
+            } else {
+                this.snackText = "1개 이상부터 주문 가능합니다.";
+                this.snackbar = true;
+            }
+        },
+        delCartItem(item, idx) {
+            this.cart.splice(idx, 1);
+        },
+        getTotalCartPrice() {
+            let total = 0;
+            this.cart.forEach((c) => {
+                total += (c.price * c.num);
+            });
+            return total;
+        },
+        buy() {
+            let total = this.getTotalCartPrice();
+            if ( total <= 0 ) {
+                this.snackText = "구매는 1원 이상부터 가능합니다.";
+                this.snackbar = true;
+                return;
+            }
+        },
 	},
     mounted() {
+        console.log(this.drawer);
+		EventBus.$on('cart-draw', (val) => {
+			this.drawer = val;
+		});
     },
+	computed: {
+		small_() {
+			return this.$store.getters.small;
+		},
+	},
+	watch: {
+		small_(val) {
+			this.small = val;
+		},
+	},
 	data() {
 		return {
-			imgs: {
-			},
+            snackbar: false,
+            snackText: "",
+            cart: [
+            ],
             items: [
                 {
                     imgs: [
@@ -186,6 +305,7 @@ export default {
                     option: 0,
                     options: [],
                     num: 0,
+                    unit: "개",
                 },
 				{
 					imgs: [
@@ -205,6 +325,7 @@ export default {
                         '2XL',
                     ],
 					num: 0,
+                    unit: "벌",
 				},
 				{
 					imgs: [
@@ -218,8 +339,11 @@ export default {
                     option: 0,
                     options: [],
 					num: 0,
+                    unit: "개",
 				},
             ],
+			small: this.$store.getters.small,
+			drawer: false,
 		};
 	},
 }

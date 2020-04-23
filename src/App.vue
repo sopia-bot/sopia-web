@@ -37,15 +37,17 @@
 				</v-row>
 
 				<v-row align="center" justify="center">
-					<v-col cols="1" v-if="docs" class="py-0">
-						<v-app-bar-nav-icon class="pa-0" @click="openMenu"></v-app-bar-nav-icon>
+					<v-col cols="1" v-if="docs || shop" class="pa-0">
+						<v-app-bar-nav-icon class="pa-0" v-if="docs" @click="openMenu"></v-app-bar-nav-icon>
 					</v-col>
 					<v-col class="pa-2 px-0" align="center">
+                    <!--
 						<v-btn 
 							text 
 							tile 
 							@click="routeAssignUrl('/')"
 							color="purple darken-4">Home</v-btn>
+                            -->
 						<v-btn
 							v-for="menu in menus"
 							:key="menu.route"
@@ -54,7 +56,9 @@
 							@click="routeAssignUrl(menu.route)"
 							color="purple darken-4"> {{ menu.name }} </v-btn>
 					</v-col>
-					<v-col cols="1" v-if="docs" class=""></v-col>
+					<v-col cols="1" v-if="docs || shop" class="pa-0 text-left">
+						<v-app-bar-nav-icon class="pa-0" v-if="shop" @click="openShop"></v-app-bar-nav-icon>
+                    </v-col>
 				</v-row>
 			</v-container>
 		</v-app-bar>
@@ -94,6 +98,9 @@ export default {
 			this.$store.commit('small', this.windowWidth < 960);
 		},
 		openMenu,
+        openShop() {
+            EventBus.$emit('cart-draw', true);
+        },
 	},
 	components: {
 	},
@@ -102,9 +109,11 @@ export default {
 			windowWidth: 0,
 			small: this.$store.getters.small,
 			docs: false,
+            shop: false,
 			menus: [
 				{ route: '/docs/', name: 'docs' },
 				{ route: '/release/', name: 'note' },
+				{ route: '/shop/', name: 'shop' },
 			]
 		}
 	},
@@ -131,6 +140,12 @@ export default {
 				this.docs = true;
 			} else {
 				this.docs = false;
+			}
+
+			if ( this.$route.path.match(/^\/shop/) ) {
+				this.shop = true;
+			} else {
+				this.shop = false;
 			}
 		}
 	},

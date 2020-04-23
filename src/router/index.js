@@ -68,6 +68,11 @@ const routes = [
         name: 'Shop',
         component: () => import('../views/Shop/List.vue'),
     },
+    {
+        path: '/shop/pay',
+        name: 'Shop',
+        component: () => import('../views/Shop/Pay.vue'),
+    },
 ]
 
 localStorage.setItem('routes', JSON.stringify(routes));

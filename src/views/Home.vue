@@ -51,23 +51,6 @@
 			</v-col>
 		</v-row>
 		<!-- E:Divider -->
-        <v-row class="ma-0">
-            <v-col cols="12" class="text-center">
-                <h3 class="grey--text font-weight-light">지난 10일간의 소피아 사용량입니다.</h3>
-            </v-col>
-        </v-row>
-        <v-row class="ma-0">
-            <v-col cols="12" class="text-center">
-                <user-chart />
-            </v-col>
-        </v-row>
-		<!-- S:Divider -->
-		<v-row class="px-12 my-6">
-			<v-col class="px-12">
-				<v-divider></v-divider>
-			</v-col>
-		</v-row>
-		<!-- E:Divider -->
 		<!-- S:Good Design -->
 		<v-row align="center">
 			<v-col align="center" class="pa-12" cols="12" md="6">
@@ -202,7 +185,7 @@ div.row {
 import Footer from './Com/footer';
 import { routeAssignUrl, hrefChange, openNewTab, getContent, mkKeyword } from '../modules/common.js';
 import Lang from '../languages/Lang.js';
-import UserChart from './UserChart';
+//import UserChart from './UserChart';
 
 export default {
 	metaInfo: {
@@ -236,7 +219,7 @@ export default {
 	},
 	name: 'home',
 	components: {
-        UserChart,
+        //UserChart,
 		Footer
 	},
 	methods: {

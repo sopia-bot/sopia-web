@@ -7,10 +7,12 @@ export default new Vuex.Store({
 	state: {
 		small: false,
 		draw: false,
+        cart: [],
 	},
 	getters: {
 		small: state => state.small,
 		draw: state => state.draw,
+        cart: state => state.cart,
 	},
 	mutations: {
 		small: (state, val) => {
@@ -19,6 +21,9 @@ export default new Vuex.Store({
 		draw: (state, val) => {
 			state.draw = val;
 		},
+        cart: (state, val) => {
+            state.cart = val;
+        },
 	},
 	actions: {
 	},

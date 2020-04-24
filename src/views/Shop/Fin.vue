@@ -112,7 +112,7 @@ export default {
         const fin = this.$store.getters.fin;
         if ( !fin ) {
             alert("구매한 이력이 없습니다.");
-            this.routeAssignUrl('/shop');
+            this.routeAssignUrl('/shop/');
             return;
         }
 

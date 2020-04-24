@@ -107,7 +107,6 @@
                             color="purple darken-4"
                             dark
                             large
-                            :disabled="!loading"
                             :loading="loading"
                             @click="pushBuyReady">구매 하기</v-btn>
                     </v-col>
@@ -299,7 +298,7 @@ export default {
                     this.loading = false;
                     if ( xhr.status === 200 ) {
                         this.$store.commit('fin', price);
-                        this.routeAssignUrl('/shop/finish');
+                        this.routeAssignUrl('/shop/finish/');
                     } else {
                         alert("주문에 실패하였습니다. 잠시 후 다시 시도해 주세요.");
                     }
@@ -325,7 +324,7 @@ export default {
         this.cart = this.$store.getters.cart;
         if ( !this.cart || this.cart.length <= 0 ) { 
             alert("구매하고자 하는 물품이 없습니다.");
-            this.routeAssignUrl('/shop');
+            this.routeAssignUrl('/shop/');
             return;
         }
         this.$store.commit('fin', false);

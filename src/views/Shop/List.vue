@@ -251,6 +251,9 @@ export default {
                 this.cart.push(OBJdump(item));
                 item.num = 0;
                 item.option = 0;
+
+                this.snackText = "우측 상단 메뉴를 눌러 확인이 가능합니다.";
+                this.snackbar = true;
             } else {
                 this.snackText = "1개 이상부터 주문 가능합니다.";
                 this.snackbar = true;
@@ -275,7 +278,7 @@ export default {
             }
 
             this.$store.commit('cart', this.cart);
-            this.routeAssignUrl('/shop/pay');
+            this.routeAssignUrl('/shop/pay/');
         },
 	},
     mounted() {

@@ -57,7 +57,7 @@
 							color="purple darken-4"> {{ menu.name }} </v-btn>
 					</v-col>
 					<v-col cols="1" v-if="docs || shop" class="pa-0 text-left">
-						<!-- <v-app-bar-nav-icon class="pa-0" v-if="shop" @click="openShop"></v-app-bar-nav-icon> -->
+						<v-app-bar-nav-icon class="pa-0" v-if="shop" @click="openShop"></v-app-bar-nav-icon>
                     </v-col>
 				</v-row>
 			</v-container>
@@ -113,7 +113,7 @@ export default {
 			menus: [
 				{ route: '/docs/', name: 'docs' },
 				{ route: '/release/', name: 'note' },
-				//{ route: '/shop/', name: 'shop' },
+				{ route: '/shop/', name: 'shop' },
 			]
 		}
 	},

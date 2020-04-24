@@ -2,6 +2,13 @@
 	<!-- S:Content -->
 	<v-content>
 		<!-- S:Introduce -->
+        <v-row align="center" class="mt-12">
+            <v-col cols="12" align="center">
+                <h1 class="title font-weight-bold">
+                    아래 사진은 예시 시안이며, 실물은 사진과 다를 수 있습니다.
+                </h1>
+            </v-col>
+        </v-row>
 		<v-row v-for="(item) in items" :key="item.title" align="center" class="mt-12">
 			<v-col cols="0" sm="1" md="3"></v-col>
 			<v-col align="center" cols="12" sm="10" md="6" class="px-12">
@@ -48,7 +55,7 @@
                     :items="item.options"
                     color="purple darken-4"
                     style="max-width: 200px;"
-                    label="옵션" />
+                    label="옵션 (검색 가능)" />
 
                 <v-btn
                     color="purple darken-3"
@@ -166,6 +173,7 @@ import Footer from '../Com/footer';
 import { routeAssignUrl, hrefChange, openNewTab, getContent, mkKeyword } from '@/modules/common.js';
 import Lang from '@/languages/Lang.js';
 import EventBus from '@/modules/event-bus.js';
+import PhoneList from './PhoneList.js';
 
 const OBJdump = (obj) => Object.assign( Object.create( Object.getPrototypeOf(obj)), obj);
 
@@ -225,10 +233,6 @@ export default {
             evt.preventDefault();
         },
         increment (item) {
-            if ( item.key === "hood" && item.num >= 1 ) {
-                item.num = 1;
-                return;
-            }
             if ( typeof item.num !== "number" ) {
                 item.num = 0;
             }
@@ -269,10 +273,13 @@ export default {
                 this.snackbar = true;
                 return;
             }
+
+            this.$store.commit('cart', this.cart);
+            this.routeAssignUrl('/shop/pay');
         },
 	},
     mounted() {
-        console.log(this.drawer);
+        this.$store.commit('fin', false);
 		EventBus.$on('cart-draw', (val) => {
 			this.drawer = val;
 		});
@@ -313,10 +320,9 @@ export default {
 						require('@/assets/shop/hood-size.png'),
 					],
 					key: "hood",
-					title: "남여 공용 후드 집업 (25장 한정)",
-                    desc: "해당 항목은 1인당 1벌만 구매 가능합니다.",
+					title: "남여 공용 후드 집업",
 					price: "39000",
-                    option: 0,
+                    option: 'S',
                     options: [
                         'S',
                         'M',
@@ -335,11 +341,24 @@ export default {
 					],
 					key: "iphone",
 					title: "핸드폰 케이스",
+                    desc: "각 케이스마다 디자인이 조금씩 다를 수 있습니다.",
 					price: "25000",
+                    option: PhoneList[0],
+                    options: PhoneList,
+					num: 0,
+                    unit: "개",
+				},
+				{
+					imgs: [
+						require('@/assets/shop/cup.jpg'),
+					],
+					key: "cup",
+					title: "머그컵",
+					price: "12000",
                     option: 0,
                     options: [],
 					num: 0,
-                    unit: "개",
+                    unit: "잔",
 				},
             ],
 			small: this.$store.getters.small,

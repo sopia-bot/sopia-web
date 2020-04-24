@@ -63,7 +63,6 @@ const routes = [
 		name: 'Refresh Serial Key',
 		component: () => import('../views/RefKey.vue'),
 	},
-    /*
     {
         path: '/shop/',
         name: 'Shop',
@@ -71,10 +70,14 @@ const routes = [
     },
     {
         path: '/shop/pay',
-        name: 'Shop',
+        name: 'Pay',
         component: () => import('../views/Shop/Pay.vue'),
     },
-    */
+    {
+        path: '/shop/finish',
+        name: 'Fin',
+        component: () => import('../views/Shop/Fin.vue'),
+    },
 ]
 
 localStorage.setItem('routes', JSON.stringify(routes));

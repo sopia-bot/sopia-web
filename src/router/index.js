@@ -78,6 +78,11 @@ const routes = [
         name: 'Fin',
         component: () => import('../views/Shop/Fin.vue'),
     },
+    {
+        path: '/shop/accept',
+        name: 'Accept',
+        component: () => import('../views/Shop/Accept.vue'),
+    },
 ]
 
 localStorage.setItem('routes', JSON.stringify(routes));

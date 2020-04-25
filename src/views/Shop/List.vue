@@ -7,6 +7,9 @@
                 <h1 class="title font-weight-bold">
                     아래 사진은 예시 시안이며, 실물은 사진과 다를 수 있습니다.
                 </h1>
+                <h2 class="subtitle-1 grey--text">
+					부득이하게 적자가 날 것 같으므로 10,000 이상 무료배송 하겠습니다.
+                </h2>
             </v-col>
         </v-row>
 		<v-row v-for="(item) in items" :key="item.title" align="center" class="mt-12">
@@ -178,37 +181,6 @@ import PhoneList from './PhoneList.js';
 const OBJdump = (obj) => Object.assign( Object.create( Object.getPrototypeOf(obj)), obj);
 
 export default {
-/*
-	metaInfo: {
-		title: Lang('meta.home'),
-		htmlAttrs: {
-			lang: navigator.language,
-			dir: 'ltr'
-		},
-		meta: [
-			{ charset: 'utf-8' },
-			{ meta: 'description', content: "No.1 매니저 소피아. 스푼 라디오 No.1 매니저 봇 소피아를 사용해 보세요. 당신의 스푼 방송을 더 멋지게 만들어주는 매니저 프로그램입니다.", vmid: 'description' },
-			{ name: 'keywords', content: mkKeyword() },
-			{ name: 'author', content: Lang('author') },
-			{
-				property: 'og:title',
-				content: Lang('meta.home'),
-				vmid: 'og:title'
-			},
-			{
-				property: 'og:description',
-				content: Lang('meta.home.desc'),
-				vmid: 'og:description',
-			},
-			{
-				property: 'og:image',
-				content: require('@/assets/home/bot.png'),
-				vmid: 'og:image',
-			},
-			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-		],
-	},
-*/
 	name: 'shopList',
 	components: {
 		Footer
@@ -252,8 +224,16 @@ export default {
                 item.num = 0;
                 item.option = 0;
 
-                this.snackText = "우측 상단 메뉴를 눌러 확인이 가능합니다.";
-                this.snackbar = true;
+				if ( this.getTotalCartPrice() - 2500 < 10000 ) {
+					this.cart[0].price = 2500;
+				} else {
+					this.cart[0].price = 0;
+				}
+				
+				if ( this.small ) {
+					this.snackText = "우측 상단 메뉴를 눌러 확인이 가능합니다.";
+					this.snackbar = true;
+				}
             } else {
                 this.snackText = "1개 이상부터 주문 가능합니다.";
                 this.snackbar = true;
@@ -302,6 +282,18 @@ export default {
             snackbar: false,
             snackText: "",
             cart: [
+				{
+					imgs: [
+						require('@/assets/shop/box.png'),
+					],
+					key: 'delivery',
+					title: '배송비',
+					num: 1,
+					unit: '개',
+					price: 2500,
+					option: 0,
+					options: [],
+				},
             ],
             items: [
                 {

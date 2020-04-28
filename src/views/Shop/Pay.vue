@@ -167,9 +167,8 @@ div.row {
 </style>
 <script>
 import Footer from '../Com/footer';
-import { routeAssignUrl, hrefChange, openNewTab, getContent, mkKeyword } from '@/modules/common.js';
+import { routeAssignUrl } from '@/modules/common.js';
 import Lang from '@/languages/Lang.js';
-import EventBus from '@/modules/event-bus.js';
 
 const OBJdump = (obj) => Object.assign( Object.create( Object.getPrototypeOf(obj)), obj);
 const parseCart = (cart) => {
@@ -229,11 +228,18 @@ export default {
 	},
 	methods: {
 		routeAssignUrl,
-		openNewTab,
-		hrefChange,
 		Lang,
         numberWithCommas(x) {
-            return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+            const str = x.toString();
+            let strLen = str.length - 1;
+            const arr = [];
+            for ( let i = 1; strLen >= 0; i++, strLen-- ) {
+                arr.unshift(str[strLen]);
+                if ( i % 3 === 0 ) {
+                    arr.unshift(",");
+                }
+            }
+            return arr.join("");
         },
 		findAddress() {
 			new daum.Postcode({
@@ -251,11 +257,6 @@ export default {
 
             if ( this.name.length <= 2 ) {
                 alert("입금자 명을 정확히 써주세요");
-                return;
-            }
-
-            if ( !this.email.trim().match(/[\w\-]+\@[\w\-]+\.\w+/) ) {
-                alert("이메일 형식이 올바르지 않습니다.");
                 return;
             }
 
@@ -298,7 +299,7 @@ export default {
                     this.loading = false;
                     if ( xhr.status === 200 ) {
                         this.$store.commit('fin', price);
-                        this.routeAssignUrl('/shop/finish/');
+                        this.routeAssignUrl('/shop/finish/', this);
                     } else {
                         alert("주문에 실패하였습니다. 잠시 후 다시 시도해 주세요.");
                     }
@@ -324,7 +325,7 @@ export default {
         this.cart = this.$store.getters.cart;
         if ( !this.cart || this.cart.length <= 0 ) { 
             alert("구매하고자 하는 물품이 없습니다.");
-            this.routeAssignUrl('/shop/');
+            this.routeAssignUrl('/shop/', this);
             return;
         }
         this.$store.commit('fin', false);

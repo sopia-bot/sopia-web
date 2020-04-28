@@ -57,9 +57,8 @@ div.row {
 </style>
 <script>
 import Footer from '../Com/footer';
-import { routeAssignUrl, hrefChange, openNewTab, getContent, mkKeyword } from '@/modules/common.js';
+import { routeAssignUrl } from '@/modules/common.js';
 import Lang from '@/languages/Lang.js';
-import EventBus from '@/modules/event-bus.js';
 
 const OBJdump = (obj) => Object.assign( Object.create( Object.getPrototypeOf(obj)), obj);
 
@@ -101,18 +100,25 @@ export default {
 	},
 	methods: {
 		routeAssignUrl,
-		openNewTab,
-		hrefChange,
 		Lang,
         numberWithCommas(x) {
-            return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+            const str = x.toString();
+            let strLen = str.length - 1;
+            const arr = [];
+            for ( let i = 1; strLen >= 0; i++, strLen-- ) {
+                arr.unshift(str[strLen]);
+                if ( i % 3 === 0 ) {
+                    arr.unshift(",");
+                }
+            }
+            return arr.join("");
         },
 	},
     mounted() {
         const fin = this.$store.getters.fin;
         if ( !fin ) {
             alert("구매한 이력이 없습니다.");
-            this.routeAssignUrl('/shop/');
+            this.routeAssignUrl('/shop/', this);
             return;
         }
 

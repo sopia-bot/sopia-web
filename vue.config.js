@@ -1,5 +1,6 @@
 const path = require('path');
 const PrerenderSpaPlugin = require('prerender-spa-plugin');
+const ansiRegex = require('ansi-regex');
 
 const plugins = [];
 
@@ -51,6 +52,6 @@ module.exports = {
 			chunkFilename: "dist/[name].js"
 		},
 	},
-	transpileDependencies: ["vuetify"],
+	transpileDependencies: ["vuetify", ansiRegex],
     runtimeCompiler: true,
 };

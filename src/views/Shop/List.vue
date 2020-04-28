@@ -123,10 +123,8 @@
                     <v-col cols="8">
                         <h1 class="headline">
                             {{ numberWithCommas(getTotalCartPrice()) }} 원
+                            <v-btn text color="purple darken-4" @click="buy">구매</v-btn>
                         </h1>
-                    </v-col>
-                    <v-col cols="4" class="text-right">
-                        <v-btn text color="purple darken-4" @click="buy">구매</v-btn>
                     </v-col>
                 </v-row>
             </div>
@@ -216,7 +214,16 @@ export default {
             }
         },
         numberWithCommas(x) {
-            return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+            const str = x.toString();
+            let strLen = str.length - 1;
+            const arr = [];
+            for ( let i = 1; strLen >= 0; i++, strLen-- ) {
+                arr.unshift(str[strLen]);
+                if ( i % 3 === 0 ) {
+                    arr.unshift(",");
+                }
+            }
+            return arr.join("");
         },
         addCartItem(item) {
             if ( item.num > 0 ) {
@@ -258,7 +265,7 @@ export default {
             }
 
             this.$store.commit('cart', this.cart);
-            this.routeAssignUrl('/shop/pay/');
+            this.routeAssignUrl('/shop/pay/', this);
         },
 	},
     mounted() {

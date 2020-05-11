@@ -113,7 +113,6 @@ export default {
 			menus: [
 				{ route: '/docs/', name: 'docs' },
 				{ route: '/release/', name: 'note' },
-				{ route: '/shop/', name: 'shop' },
 			]
 		}
 	},

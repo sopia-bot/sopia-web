@@ -1,22 +1,6 @@
 <template>
 	<!-- S:Content -->
 	<v-content>
-		<!-- S:SHOP -->
-		<v-img dark :src="imgs.shops[rand(imgs.shops.length)]" class="shop-banner" height="500px" style="background-size: contain;">
-			<v-content class="pa-0">
-				<v-row align="center" style="height:500px">
-					<v-col align="center" style="height: unset;">
-						<h1 class="display-2 font-weight-black">
-							<span class="purple--text text--lighten-2">SOPIA</span> <span style="color:white;">SHOP </span>
-							<v-btn @click="routeAssignUrl('/shop/')" color="purple lighten-2" icon x-large>
-								<v-icon>mdi-arrow-right-bold-circle</v-icon>
-							</v-btn>
-						</h1>
-					</v-col>
-				</v-row>
-			</v-content>
-		</v-img>
-		<!-- E:SHOP -->
 		<!-- S:Introduce -->
 		<v-row align="center" class="mt-12">
 			<v-col cols="0" sm="1" md="3"></v-col>
@@ -260,15 +244,6 @@ export default {
 				"bundle": require('@/assets/home/bundle.gif'),
 				"kakao": require('@/assets/home/kakao.gif'),
 				"anydesk": require('@/assets/home/anydesk.png'),
-				shops: [
-					require('@/assets/shop/galaxyS9P.gif'),
-					require('@/assets/shop/galaxyS20.gif'),
-					require('@/assets/shop/iPhoneX.gif'),
-					require('@/assets/shop/hood.png'),
-					require('@/assets/shop/cup.jpg'),
-					require('@/assets/shop/band-front.jpg'),
-					require('@/assets/shop/band-back.jpg'),
-				],
 			},
 		};
 	},

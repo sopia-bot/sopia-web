@@ -12,7 +12,8 @@
 					align="center">
 					<v-col cols="8" class="text-left title">
 						<h1 class="headline">{{ time2Locale(item) }}</h1>
-						<span>{{ ready[item].name }}</span>: <span>{{ numberWithCommas(ready[item].price) }}</span> 원
+						<p><span>{{ ready[item].name }}</span>: <span>{{ numberWithCommas(ready[item].price) }}</span> 원</p>
+						<p class="subtitle-1">{{ready[item].address}} {{ ready[item].detailAddr }}</p>
 					</v-col>
 					<v-col cols="4">
 						<v-btn

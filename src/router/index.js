@@ -63,26 +63,6 @@ const routes = [
 		name: 'Refresh Serial Key',
 		component: () => import('../views/RefKey.vue'),
 	},
-    {
-        path: '/shop/',
-        name: 'Shop',
-        component: () => import('../views/Shop/List.vue'),
-    },
-    {
-        path: '/shop/pay',
-        name: 'Pay',
-        component: () => import('../views/Shop/Pay.vue'),
-    },
-    {
-        path: '/shop/finish',
-        name: 'Fin',
-        component: () => import('../views/Shop/Fin.vue'),
-    },
-    {
-        path: '/shop/accept',
-        name: 'Accept',
-        component: () => import('../views/Shop/Accept.vue'),
-    },
 ]
 
 localStorage.setItem('routes', JSON.stringify(routes));

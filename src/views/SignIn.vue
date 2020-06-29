@@ -27,9 +27,12 @@
 							<v-col>
 								<h2 class="title black--text">신청이 완료되었습니다.</h2>
 								<h3 class="subtitle-1">스푸너님의 시리얼은 <span class="purple--text text--darken-4">{{ serial }}</span> 입니다.</h3>
+								<!--
 								<h3 class="subtitle-1">아래 내용을 복사하여 1:1 카톡방으로 보내주시면 확인 후 발급해 드립니다.</h3>
+								-->
 							</v-col>
 						</v-row>
+						<!--
 						<v-row align="center">
 							<v-col>
 								<v-textarea
@@ -44,6 +47,7 @@
 								<v-btn class="purple darken-4" dark @click="copyText">복사</v-btn>
 							</v-col>
 						</v-row>
+						-->
 					</v-container>
 				</v-card-text>
 			</v-card>
@@ -354,10 +358,14 @@ export default {
 			const xhr = new XMLHttpRequest();
 			xhr.onreadystatechange = () => {
 				if ( xhr.status === 200 && xhr.readyState === 4 ) {
-					this.loading = false;
 					const data = JSON.parse(xhr.responseText);
+					this.loading = false;
 					if ( data.result === true ) {
 						this.serial = data.msg;
+						this.resDiag = true;
+
+
+						/*
 						let text = "";
 						text += new Date().toLocaleString() + " 소피아 신청\n\n";
 						text += "신청자: " + (this.who === 'dj' ? 'DJ' : '매니저') + "\n";
@@ -374,6 +382,7 @@ export default {
 						text += "시리얼: " + this.serial;
 						this.resText = text;
 						this.resDiag = true;
+						*/
 					} else {
 						this.snackbar = true;
 						this.snackText = data.msg;

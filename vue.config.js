@@ -13,6 +13,7 @@ if ( process.argv[2] === "build" ) {
 			"/signin/",
 			"/refresh-key/",
 			"/release/",
+			"/docs/quick-start/how-to-sign/",
 			"/docs/quick-start/install/",
 			"/docs/quick-start/manager/",
 			"/docs/quick-start/load-setting/",

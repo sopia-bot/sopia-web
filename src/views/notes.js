@@ -1,5 +1,13 @@
 export default [
 	{
+		title: '소피아 1.4.1',
+		ver: '1.4.1',
+		patchs: [
+			'[!HotFix] present.json 이상 동작 수정',
+			'로그인시 공백있으면 오류나는 동작 수정',
+		],
+	},
+	{
 		title: '소피아 1.4.0',
 		ver: '1.4.0',
 		patchs: [

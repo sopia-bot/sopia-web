@@ -36,8 +36,7 @@
 
 				<Picture :src="imgs.requestSerial" caption="예상 외로 이 버튼을 못 누르는 사람들이 많습니다."  />
 
-				<Picture :src="imgs.finalStep" caption="또 예상 외로 무엇을 보내야 하는지 모르는 사람도 많습니다."  />
-
+				그러면, 시리얼 발급은 끝났습니다. 즉시 사용하시면 됩니다.
 
 				<!-- S:Footer -->
 				<v-divider class="mt-12 mb-3"></v-divider>

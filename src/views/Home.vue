@@ -136,7 +136,7 @@
 		<!-- E:Bundle -->
 		<v-img :src="imgs.kakao" class="custom" max-height="700px">
 			<v-content class="pa-0">
-				<v-row align="center" style="height:700px">
+				<v-row align="center" class="ma-0" style="height:700px; background-color: rgba(0, 0, 0, 0.7);">
 					<v-col cols="12" align="center">
 						<h1 class="display-2 font-weight-bold yellow--text text--lighten-3">{{ Lang('intro.comunity') }}</h1>
 						<br>
@@ -146,6 +146,7 @@
 							dark
 							@click="hrefChange('kakaoopen://join?l=gtHSynXb&r=EW')"
 							color="yellow darken-3"
+							tile
 							class="mt-6">커뮤니티 참여</v-btn>
 					</v-col>
 				</v-row>

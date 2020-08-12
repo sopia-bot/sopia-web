@@ -41,7 +41,7 @@ const routes = [
 		name: 'Docs',
 		component: () => import('../views/Docs.vue'),
 		children: docsChildren,
-		redirect: '/docs/quick-start/install/'
+		redirect: '/docs/quick-start/how-to-sign/'
 	},
 	{
 		path: '/sitemap',

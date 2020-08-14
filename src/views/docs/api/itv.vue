@@ -66,19 +66,6 @@
 					</v-col>
 				</v-row>
 
-				<v-divider class="my-12"></v-divider>
-				<h2 class="title font-weight-bold mt-2">예제 코드</h2>
-
-				<v-row>
-					<v-col>
-						<p>다음 코드는 5초마다 현재 몇 회 반복했는지 채팅을 보내면서, 5회 동작 후 반복을 제거하는 코드입니다.</p>
-						
-						<vue-embed-gist
-							gist-id="e79c365d5435abb295acd413ab05d88a"
-							file="api.itv.ex-1.js"></vue-embed-gist>
-					</v-col>
-				</v-row>
-
 				<!-- S:Footer -->
 				<v-divider class="mt-12 mb-3"></v-divider>
 				<v-row class="my-6">

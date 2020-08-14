@@ -10,18 +10,6 @@
 					<v-col>
 						<!-- S:Login -->
 						<h1 class="headline font-weight-bold">로그인</h1>
-						<!-- S:Sheet Card -->
-						<v-row class="mt-6">
-							<v-col>
-								<v-sheet
-									elevation="4"
-									class="mx-auto pa-6 sheet-card">
-									소피아는 시리얼을 할당받아야만 사용 가능합니다.<br>
-									개발자 및 운영진에게 상담해 쉽게 시리얼을 받을 수 있습니다.
-								</v-sheet>
-							</v-col>
-						</v-row>
-						<!-- E:Sheet Card -->
 						<!-- S:Assign Serial -->
 						<v-row class="mt-6">
 							<v-col>

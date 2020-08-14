@@ -113,6 +113,10 @@ export default {
 					key: '/docs/api/itv/',
 					name: Lang('docs.api.itv'),
 				},
+				{
+					key: '/docs/api/inject/',
+					name: Lang('docs.api.inject'),
+				},
 			],
 		},
 	],

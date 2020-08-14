@@ -86,6 +86,9 @@
 	"meta.docs.api.itv": "Itv 객체 | API 가이드",
 	"meta.docs.api.itv.desc": " Itv 객체 일정 시간마다 반복 작업 수행 sopia.itv : Object Function add 반복 작업 추가 파라미터 Key String 반복 작업 이름 Func Function 반복 작업을 수행할 함수 Time Number 반복 시간 ( Ms 단위 )", 
 
+	"meta.docs.api.inject": "스크립트 삽입 | API 가이드",
+	"meta.docs.api.inject.desc": "프로그램이 로딩되기 전, 로딩 중, 로딩 완료 세 단계에 따른 커스텀 스크립트를 삽입할 수 있습니다.  해당 기능은 sopia/inject 폴더 안에 있는 스크립트를 파일 이름 순으로 정렬한 뒤, 순차적으로 실행합니다. 프로그램 로딩 전 호출되는 함수 정확히 Head 태그가 로딩될 때 호출됩니다.", 
+
 
 	"home.introduce": "당신의 스푼 방송을 더 멋지게 만들어주는 매니저 프로그램",
 	"home.download": "최신 다운로드",
@@ -144,5 +147,6 @@
 	"docs.api.sopia": "Sopia 객체",
 	"docs.api.var": "Var 객체",
 	"docs.api.config": "Config 객체",
-	"docs.api.itv": "Itv 객체"
+	"docs.api.itv": "Itv 객체",
+	"docs.api.inject": "스크립트 삽입"
 }

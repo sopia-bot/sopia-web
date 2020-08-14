@@ -73,19 +73,6 @@
 					</v-col>
 				</v-row>
 
-				<v-divider class="my-12"></v-divider>
-				<h2 class="title font-weight-bold mt-2">예제 코드</h2>
-
-				<v-row>
-					<v-col>
-						<p>다음 코드는 각 이벤트 발생에 따라 Console 에 기록하는 코드입니다.</p>
-						
-						<vue-embed-gist
-							gist-id="c8eea9fbe4bf9a434e5d3de5f61af3ce"
-							file="api.sopia.ex-1.js"></vue-embed-gist>
-					</v-col>
-				</v-row>
-
 				<!-- S:Footer -->
 				<v-divider class="mt-12 mb-3"></v-divider>
 				<v-row class="my-6">

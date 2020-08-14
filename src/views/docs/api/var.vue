@@ -49,13 +49,6 @@
 					</v-col>
 				</v-row>
 
-				<v-divider class="my-6"></v-divider>
-				<h1 class="headline font-weight-bold mb-3">사용 예제</h1>
-				<p>다음 예제는 <code>!before</code> 명령어를 쳤을 때 이전에 채팅을 쳤었던 청취자의 닉네임을 알려주는 예제입니다.</p>
-
-				<vue-embed-gist
-					gist-id="1a8f0176b6c6defd4ccaa4b2ebdcec3a"
-					file="api.var.ex-1.js"></vue-embed-gist>
 
 				<!-- S:Footer -->
 				<v-divider class="mt-12 mb-3"></v-divider>

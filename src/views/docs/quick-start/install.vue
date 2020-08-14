@@ -50,8 +50,8 @@
 						<v-sheet
 							elevation="4"
 							class="mx-auto pa-6 sheet-card">
-							소피아는 PC에서만 실행시킬 수 있습니다. Windows 시스템 기반이지만, 리눅스나 Mac OS 또한 가능합니다.<br>
-							리눅스, Mac OS 는 따로 상담 후 빌드를 해야 합니다.
+							소피아는 PC에서만 실행시킬 수 있습니다. Windows OS 만 사용가능합니다.<br>
+							모바일, Mac OS는 사용 불가합니다.
 						</v-sheet>
 					</v-col>
 				</v-row>

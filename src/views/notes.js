@@ -1,5 +1,12 @@
 export default [
 	{
+		title: '소피아 1.5.1',
+		ver: '1.5.1',
+		patchs: [
+			'[!HotFix] 유저정보 가져오지 못할 시, 아무런 동작하지 않는 버그 수정',
+		],
+	},
+	{
 		title: '소피아 1.5.0',
 		ver: '1.5.0',
 		patchs: [

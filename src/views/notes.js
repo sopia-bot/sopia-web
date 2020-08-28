@@ -1,5 +1,12 @@
 export default [
 	{
+		title: '소피아 1.5.2',
+		ver: '1.5.2',
+		patchs: [
+			'sopia.me 객체 null 현상 수정 (매니저 검사 못 하는 버그 수정)',
+		],
+	},
+	{
 		title: '소피아 1.5.1',
 		ver: '1.5.1',
 		patchs: [

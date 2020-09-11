@@ -13,6 +13,8 @@ export default [
 			'중앙 분할창 상태 저장 (소피아 재시작시 유지됨)',
 			'문법 검사 방식 수정 (더 자세한 오류 내용 확인 가능)',
 			'에디터 html 문법 코드 하이라이팅 지원',
+			'Spoor Chat <code>규리</code>삭제',
+			'Spoor Chat <code>봄</code>, <code>라이언</code>, <code>나오미</code>, <code>닉</code> 추가',
 		],
 	},
 	{

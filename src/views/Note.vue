@@ -10,9 +10,7 @@
 						</a>
 						<br>
 						<br>
-						<p v-for="(patch, idx) in note.patchs" :key="patch" class="ml-10">
-							- {{ patch }}
-						</p>
+						<p v-for="(patch, idx) in note.patchs" :key="patch" class="ml-10" v-html="' - ' + patch"></p>
 					</v-col>
 				</v-row>
 			</v-col>

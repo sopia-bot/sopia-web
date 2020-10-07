@@ -107,7 +107,7 @@ export default {
 			},
 			{
 				property: 'og:image',
-				content: require('@/assets/docs/bundle/loop/loop-1.gif'),
+				content: require('@/assets/docs/bundle/ez-cmd/join_like.png'),
 				vmid: 'og:image',
 			},
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },

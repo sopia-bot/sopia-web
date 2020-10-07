@@ -8,6 +8,7 @@ if ( process.argv[2] === "build" ) {
 	plugins.push(new PrerenderSpaPlugin({
 		staticDir: path.join(__dirname, 'dist'),
 		indexPath: path.join(__dirname, 'dist', 'index.html'),
+		captureAfterTime: 5000,
 		routes: [
 			"/",
 			"/signin/",
@@ -30,6 +31,7 @@ if ( process.argv[2] === "build" ) {
 			"/docs/bundle/vote/",
 			"/docs/bundle/now-song/",
 			"/docs/bundle/minigame/",
+			"/docs/bundle/ez-cmd/",
 			"/docs/api/start/",
 			"/docs/api/sopia/",
 			"/docs/api/var/",

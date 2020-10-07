@@ -15,7 +15,7 @@
 							<v-col>
 								<h1 class="title font-weight-bold mb-3">1. 시리얼 인증</h1>
 								개발자에게 할당받은 시리얼로 아이디와 함께 인증합니다.<br>
-								1인 1시리얼이 할당되며, 1계정 1PC 에서만 사용 가능하고, 1PC에선 1계정만 사용가능합니다.
+								하나의 계정에 한 개 시리얼이 할당되며, 다른 PC에서 중복 로그인이 불가능합니다.
 							</v-col>
 						</v-row>
 						<!-- E:Assign Serial -->
@@ -45,6 +45,14 @@
 						<!-- S:Picture -->
 						<Picture :src="imgs.sopiaWelcome" caption="닉네임 노출 허락받은 사진입니다." />
 						<!-- E:Picture -->
+
+						<v-row class="mt-6">
+							<v-col>
+								<h1 class="title font-weight-bold mb-3">4. 쉬운 명령어 설정</h1>
+								아무리 간단하다고 하지만 코딩은 처음 본 사람에겐 너무나 어려운 것이었습니다.<br>
+								<router-link to="/docs/bundle/ez-cmd/" class="blue-grey--text">이 번들</router-link>을 사용하여 코딩 없이 명령어와 반응을 편하게 설정 가능합니다.
+							</v-col>
+						</v-row>
 						<!-- E:Login -->
 					</v-col>
 				</v-row>

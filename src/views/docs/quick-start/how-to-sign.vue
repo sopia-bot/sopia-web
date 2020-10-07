@@ -11,9 +11,7 @@
 						<v-sheet
 							elevation="4"
 							class="mx-auto pa-6 sheet-card">
-							매번 말하지만 <strong>구글</strong> 및 <strong>애플</strong> 계정은 안 됩니다.<br>
-							구글은 소피아 2에서 지원할 예정, 애플 미정이니 참고하시고 <br>
-							본인 부주의로 인한 시리얼 발급 미숙 및 관리 부족은 해결 안 해드립니다.
+							이제 <strong>구글</strong> 및 <strong>애플</strong> 계정의 가입이 가능합니다!
 						</v-sheet>
 					</v-col>
 				</v-row>
@@ -28,7 +26,7 @@
 
 				<Picture :src="imgs.whoDj" caption="소피아가 사용될 주 방송의 DJ를 한 명 고릅니다."  />
 
-				<Picture :src="imgs.search" caption="하도 제대로 못 보내서 스푼 검색 시스템을 넣어놨습니다."  />
+				<Picture :src="imgs.search" caption="더 편하게 검색할 수 있도록 스푼 검색 시스템을 넣어놨습니다."  />
 
 				<Picture :src="imgs.whoManager" caption="소피아를 사용할 계정을 선택합니다."  />
 

@@ -87,6 +87,10 @@ export default {
 					key: '/docs/bundle/minigame/',
 					name: Lang('docs.bundle.minigame'),
 				},
+				{
+					key: '/docs/bundle/ez-cmd/',
+					name: Lang('docs.bundle.ez-cmd'),
+				},
 			],
 		},
 		{

@@ -35,6 +35,7 @@ if ( process.argv[2] === "build" ) {
 			"/docs/api/var/",
 			"/docs/api/config/",
 			"/docs/api/itv/",
+			"/docs/api/inject/",
 		],
 	}));
 }

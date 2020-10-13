@@ -6,17 +6,6 @@
 				<h1 class="display-1 purple--text text--darken-4">어떻게 시리얼을 발급하나요?</h1>
 				<h2 class="subtitle-1 grey--text mt-2">내가 이것까지 써야 했었나</h2>
 				<v-divider class="my-6"></v-divider>
-				<v-row class="mt-6">
-					<v-col>
-						<v-sheet
-							elevation="4"
-							class="mx-auto pa-6 sheet-card">
-							매번 말하지만 <strong>구글</strong> 및 <strong>애플</strong> 계정은 안 됩니다.<br>
-							구글은 소피아 2에서 지원할 예정, 애플 미정이니 참고하시고 <br>
-							본인 부주의로 인한 시리얼 발급 미숙 및 관리 부족은 해결 안 해드립니다.
-						</v-sheet>
-					</v-col>
-				</v-row>
 				<v-row>
 					<v-col>
 						아래 링크를 클릭해 가입 페이지로 들어갑니다.<br>

@@ -6,6 +6,15 @@
 				<h1 class="display-1 purple--text text--darken-4">어떻게 시리얼을 발급하나요?</h1>
 				<h2 class="subtitle-1 grey--text mt-2">내가 이것까지 써야 했었나</h2>
 				<v-divider class="my-6"></v-divider>
+				<v-row class="mt-6">
+					<v-col>
+						<v-sheet
+							elevation="4"
+							class="mx-auto pa-6 sheet-card">
+							이제 <strong>구글</strong> 및 <strong>애플</strong> 계정의 가입이 가능합니다!
+						</v-sheet>
+					</v-col>
+				</v-row>
 				<v-row>
 					<v-col>
 						아래 링크를 클릭해 가입 페이지로 들어갑니다.<br>
@@ -17,7 +26,7 @@
 
 				<Picture :src="imgs.whoDj" caption="소피아가 사용될 주 방송의 DJ를 한 명 고릅니다."  />
 
-				<Picture :src="imgs.search" caption="하도 제대로 못 보내서 스푼 검색 시스템을 넣어놨습니다."  />
+				<Picture :src="imgs.search" caption="더 편하게 검색할 수 있도록 스푼 검색 시스템을 넣어놨습니다."  />
 
 				<Picture :src="imgs.whoManager" caption="소피아를 사용할 계정을 선택합니다."  />
 

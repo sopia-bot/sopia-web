@@ -71,6 +71,9 @@
 	"meta.docs.bundle.minigame": "미니게임 | 소피아 번들",
 	"meta.docs.bundle.minigame.desc": "미니게임 디제이의 컨텐츠는 어디까지 늘어날까 1. 추첨 닉네임 노출 허락받은 사진입니다. !추첨 명령어를 이용하여, 현재 방송 목록에 있는 청취자 중 한 명을 고릅니다.",
 
+	"meta.docs.bundle.ez-cmd": "쉬운 명령어 추가 | 소피아 번들",
+	"meta.docs.bundle.ez-cmd.desc": "해당 번들과 동시에 OnOff 번들을 사용중이라면, 소피아에 오동작이 일어날 수 있습니다.  해당 번들을 사용기로 하면, OTHER 메뉴에 EZ-CMD 메뉴가 추가됩니다.  만약 추가되지 않았거나 페이지가 정상 이동하지 않을 경우 소피아 프로그램을 재시작 해야 합니다.  입장 & 하트에 대한 반응을 쉽게 설정할 수 있습니다.  설명에 존재하듯, 예약어 목록을 그대로 사용하면 정보가 변경되어 출력됩니다.",
+
 	"meta.docs.api.start": "시작하기 | API 가이드",
 	"meta.docs.api.start.desc": "사전 지식 소피아는 프로그래밍 언어 중 하나인 Javascript 를 사용했습니다. API 가이드에선 프로그래밍에 관한 설명은 없으며, 오로지 소피아가 지원하는 객체와 그 사용법에 대해서만 설명합니다. 자바스크립트 가이드는 MDN 을 참고하십시오.",
 
@@ -141,6 +144,7 @@
 	"docs.bundle.vote": "투표",
 	"docs.bundle.now-song": "현재곡",
 	"docs.bundle.minigame": "미니게임",
+	"docs.bundle.ez-cmd": "쉬운 명령어 추가",
 
 	"docs.api": "API 가이드",
 	"docs.api.start": "시작하기",

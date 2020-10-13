@@ -11,7 +11,7 @@
 						<v-sheet
 							elevation="4"
 							class="mx-auto pa-6 sheet-card">
-							각 번들의 세세한 설명 및 사용법은 <router-link to="/docs/bundle/onoff" class="blue-grey--text">번들 안내</router-link> 메뉴에서 확인할 수 있습니다.
+							각 번들의 세세한 설명 및 사용법은 <router-link to="/docs/bundle/onoff/" class="blue-grey--text">번들 안내</router-link> 메뉴에서 확인할 수 있습니다.
 						</v-sheet>
 					</v-col>
 				</v-row>

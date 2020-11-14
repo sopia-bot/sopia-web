@@ -1,5 +1,12 @@
 export default [
 	{
+		title: '소피아 1.7.1',
+		ver: '1.7.1',
+		patchs: [
+			'<code>EZ-CMD</code>탭 즉시 적용 안 됨, 코드 증발 버그 수정',
+		],
+	},
+	{
 		title: '소피아 1.7.0',
 		ver: '1.7.0',
 		patchs: [

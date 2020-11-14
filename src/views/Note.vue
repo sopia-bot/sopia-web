@@ -41,6 +41,15 @@
 	outline: none;
 }
 </style>
+<style scope>
+code {
+	box-shadow: unset !important;
+	color: #4A148C !important;
+	font-weight: 300 !important;
+	font-family: unset !important;
+	padding: 3px 6px !important;
+}
+</style>
 <script>
 import { routeAssignUrl } from '@/modules/common.js';
 import notes from './notes.js';

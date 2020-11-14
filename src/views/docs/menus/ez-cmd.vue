@@ -20,7 +20,7 @@
 						<v-sheet
 							elevation="4"
 							class="mx-auto pa-6 sheet-card">
-							해당 번들은 소피아 버전 <code>1.6.0</code> 이상부터 지원합니다.
+							해당 기능은 <router-link to="/docs/menus/code/" class="blue-grey--text">CODE</router-link> 탭의 <code>storages</code> 폴더 안 파일을 공유합니다.
 						</v-sheet>
 					</v-col>
 				</v-row>
@@ -31,13 +31,6 @@
 							class="mx-auto pa-6 sheet-card">
 							해당 번들과 동시에 <router-link to="/docs/bundle/onoff/" class="blue-grey--text">OnOff</router-link> 번들을 사용중이라면, 소피아에 오동작이 일어날 수 있습니다.
 						</v-sheet>
-					</v-col>
-				</v-row>
-				<Picture :src="imgs.viewMenu" />
-				<v-row>
-					<v-col>
-						해당 번들을 사용기로 하면, OTHER 메뉴에 <code>EZ-CMD</code> 메뉴가 추가됩니다.<br>
-						만약 추가되지 않았거나 페이지가 정상 이동하지 않을 경우 소피아 프로그램을 재시작 해야 합니다.
 					</v-col>
 				</v-row>
 				<Picture :src="imgs.joinLike" />
@@ -94,24 +87,24 @@ import Lang from '../../../languages/Lang.js';
 export default {
 	name: 'bundle.ez-cmd',
 	metaInfo: {
-		title: Lang('meta.docs.bundle.ez-cmd'),
+		title: Lang('meta.docs.ez-cmd'),
 		htmlAttrs: {
 			lang: navigator.language,
 			dir: 'ltr'
 		},
 		meta: [
 			{ charset: 'utf-8' },
-			{ meta: 'description', content: Lang('meta.docs.bundle.ez-cmd.desc'), vmid: 'description' },
+			{ meta: 'description', content: Lang('meta.docs.ez-cmd.desc'), vmid: 'description' },
 			{ name: 'keywords', content: mkKeyword(["봇 사용법", "스푼 라디오 매니저 사용법", "명령어", "추가", "입장", "좋아요", "반응", "멘트"]) },
 			{ name: 'author', content: Lang('author') },
 			{
 				property: 'og:title',
-				content: Lang('meta.docs.bundle.ez-cmd'),
+				content: Lang('meta.docs.ez-cmd'),
 				vmid: 'og:title'
 			},
 			{
 				property: 'og:description',
-				content: Lang('meta.docs.bundle.ez-cmd.desc'),
+				content: Lang('meta.docs.ez-cmd.desc'),
 				vmid: 'og:description',
 			},
 			{

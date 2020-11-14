@@ -20,10 +20,6 @@ export default {
 					name: Lang('docs.quick.manager'),
 				},
 				{
-					key: '/docs/quick-start/load-setting/',
-					name: Lang('docs.quick.load-setting'),
-				},
-				{
 					key: '/docs/quick-start/spoor-chat/',
 					name: Lang('docs.quick.spoor-chat'),
 				},
@@ -36,6 +32,10 @@ export default {
 				{
 					key: '/docs/menus/home/',
 					name: Lang('docs.menus.home'),
+				},
+				{
+					key: '/docs/menus/ez-cmd/',
+					name: Lang('docs.menus.ez-cmd'),
 				},
 				{
 					key: '/docs/menus/code/',

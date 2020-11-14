@@ -12,15 +12,11 @@
 					<v-col>
 						<h2 class="title">1. 자동 매니저 멘트 시작</h2>
 						<p>방송에 입장시 자동으로 <code>!on</code> 명령어를 사용한 상태가 됩니다.</p>
-						<span class="grey--text">곧 사라질 기능입니다.</span>
 						<br><br>
-						<h2 class="title">2. 매니저일때만 매니저 멘트 작동</h2>
-						<p>설정하지 않을시 매니저가 아니어도 입장, 좋아요, 선물에 대한 반응을 합니다.</p>
+						<h2 class="title">2. 에디터 다크모드 적용</h2>
+						<p>CODE 탭의 에디터를 다크모드로 변경합니다.</p>
 						<br>
-						<h2 class="title">3. 설정 불러오기</h2>
-						<p>설정 불러오기에 대한 설명은 <router-link to="/docs/quick-start/load-setting" class="blue-grey--text">이곳</router-link>을 참고하세요.</p>
-						<br>
-						<h2 class="title">4. 기본 스푼 Url</h2>
+						<h2 class="title">3. 기본 스푼 Url</h2>
 						<p>이 기능은 해외 거주 사용자를 위한 기능입니다. 거주 지역 서버로 자동 접속이 되면 <code>https://spooncast.net/kr</code>로 저장 후 소피아를 재시작 하면 됩니다.</p>
 					</v-col>
 				</v-row>

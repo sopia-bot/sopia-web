@@ -1,5 +1,12 @@
 export default [
 	{
+		title: '소피아 1.8.1',
+		ver: '1.8.1',
+		patchs: [
+			'[!HotFix] 레거시 코드 지원되지 않는 버그 수정',
+		],
+	},
+	{
 		title: '소피아 1.8.0',
 		ver: '1.8.0',
 		patchs: [

@@ -1,5 +1,20 @@
 export default [
 	{
+		title: '소피아 1.8.3',
+		ver: '1.8.3',
+		patchs: [
+			'[!HotFix] 소피아 전체적인 버그 수정',
+			'SETTING 탭에서 소피아 홈페이지 여는 버튼 추가',
+		],
+	},
+	{
+		title: '소피아 1.8.2',
+		ver: '1.8.2',
+		patchs: [
+			'[!HotFix] 방송 입장시 내부적인 버그 수정',
+		],
+	},
+	{
 		title: '소피아 1.8.1',
 		ver: '1.8.1',
 		patchs: [

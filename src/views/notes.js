@@ -1,5 +1,17 @@
 export default [
 	{
+		title: '소피아 1.8.0',
+		ver: '1.8.0',
+		patchs: [
+			'소피아의 중요 엔진을 <a class="blue-grey--text text--darken-3" href="https://github.com/sopia-bot/sopia-core" target="_blank">sopia-core</a>로 변경했습니다.<br>기존 레거시 코드는 지원하지만, 이 때문에 소피아 입장을 두 번 합니다.',
+			'<a class="blue-grey--text text--darken-3" href="https://typecast.ai/" target="_balnk">Typecast</a>의 목소리를 추가했습니다. (총 59개)',
+			'SPOOR CHAT의 동작 방식을 더 최적화 하였습니다.',
+			'SPOOR CHAT에서 랜덤 타입 사용시, 원하는 목소리만 선택하여 그 중 랜덤하게 사용할 수 있습니다.',
+			'<code>sopia.send</code>의 함수가 100글자 넘어가는 글을 전송시 일부 전송이 되지 않는 버그를 수정했습니다.',
+			'업데이트시 릴리즈노트 페이지를 띄우도록 하였습니다.',
+		],
+	},
+	{
 		title: '소피아 1.7.2',
 		ver: '1.7.2',
 		patchs: [

@@ -52,22 +52,32 @@ code {
 </style>
 <script>
 import { routeAssignUrl } from '@/modules/common.js';
-import notes from './notes.js';
 
 export default {
 	name: 'release-note',
 	components: {
 	},
-	mounted: function() {
-		console.log(this.$route);
-		if ( this.$route.hash.length > 0 ) {
-			document.querySelector(`a[href="${this.$route.hash}"]`).click();
-			document.body.click();
-		}
+	mounted() {
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = () => {
+            if ( xhr.status === 200 && xhr.readyState === 4 ) {
+                const data = JSON.parse(xhr.responseText);
+				this.notes = data;
+				this.$nextTick(() => {
+					console.log(this.$route);
+					if ( this.$route.hash.length > 0 ) {
+						document.querySelector(`a[href="${this.$route.hash}"]`).click();
+						document.body.click();
+					}
+				});
+            }
+        };
+        xhr.open('get', `https://sopia-bot.firebaseio.com/notes.json`);
+        xhr.send();
 	},
 	data: function () {
 		return {
-			notes,
+			notes: null,
 		}
 	}
 }

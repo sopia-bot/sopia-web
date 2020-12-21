@@ -1,6 +1,57 @@
 <template>
 	<!-- S:Content -->
 	<v-content>
+		<!-- S:User Search Dialog -->
+		<v-dialog
+			v-model="dialog"
+			width="80%"
+			max-width="600">
+			<v-card class="pa-3">
+				<v-card-title class="headline purple--text text--darken-4">유저 검색</v-card-title>
+				<v-card-text>
+					<v-container>
+						<v-row align="center">
+							<v-col cols="7" sm="9">
+								<v-text-field
+									label="닉네임"
+									v-model="nickname"
+									color="purple darken-4"
+									single-line></v-text-field>
+							</v-col>
+							<v-col align="center">
+								<v-btn
+									text
+									color="purple darken-4"
+									@click="searchUsers">
+									검색
+								</v-btn>
+							</v-col>
+						</v-row>
+						<v-divider></v-divider>
+						<v-row align="center">
+							<v-col align="center">
+								<v-list two-line>
+									<v-list-item
+										v-for="(user, idx) in users"
+										:key="idx"
+										align="center"
+										@click="selectUser(user.tag);">
+										<v-list-item-avatar>
+											<v-img :src="user.profile_url"></v-img>
+										</v-list-item-avatar>
+										<v-list-item-content align="left">
+											<v-list-item-title>{{ user.nickname }}</v-list-item-title>
+											<v-list-item-subtitle>{{ user.tag }}</v-list-item-subtitle>
+										</v-list-item-content>
+									</v-list-item>
+								</v-list>
+							</v-col>
+						</v-row>
+					</v-container>
+				</v-card-text>
+			</v-card>
+		</v-dialog>
+		<!-- E:User Search Dialog -->
 		<!-- S:Introduce -->
 		<v-row align="center" class="mt-12">
 			<v-col cols="0" sm="1" md="3"></v-col>
@@ -44,6 +95,49 @@
 			<v-col cols="1" sm="1" md="2"></v-col>
 		</v-row>
 		<!-- E:Buttons -->
+		<!-- S:Divider -->
+		<v-row class="px-12 my-6">
+			<v-col class="px-12">
+				<v-divider></v-divider>
+			</v-col>
+		</v-row>
+		<!-- E:Divider -->
+		<v-row align="center">
+			<v-col align="center" class="px-12">
+				<h2>시리얼을 잃어버렸을 땐?</h2>
+			</v-col>
+		</v-row>
+		<v-row align="center">
+			<v-col align="center" class="px-12">
+				<v-col cols="12">
+					<v-text-field
+						label="@고유 닉네임"
+						v-model="acctag"
+						disabled
+						style="display: inline-flex; max-width: 200px; width: 90%;"
+						color="purple darken-4"
+						single-line></v-text-field>
+					<v-btn
+						text
+						color="purple darken-4"
+						style="display: inline-flex;"
+						@click="users=[]; dialog = true;">
+						검색
+					</v-btn>
+				</v-col>
+			</v-col>
+		</v-row>
+		<v-row align="center">
+			<v-col align="center" class="px-12">
+				<v-skeleton-loader
+					v-if="serialLoading"
+					class="mx-auto"
+					max-width="400px"
+					type="text"
+					></v-skeleton-loader>
+				<span v-else>{{ serial }}</span>
+			</v-col>
+		</v-row>
 		<!-- S:Divider -->
 		<v-row class="px-12 my-6">
 			<v-col class="px-12">
@@ -232,7 +326,36 @@ export default {
 		Lang,
 		rand(x) {
 			return Math.floor(Math.random() * x);
-		}
+		},
+		searchUsers() {
+			const xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = () => {
+				if ( xhr.status === 200 && xhr.readyState === 4 ) {
+					const data = JSON.parse(xhr.responseText);
+					const results = data.results;
+					this.users = results;
+				}
+			};
+			xhr.open('get', `https://api.spooncast.net/search/user/?q=${this.nickname}`);
+			xhr.send();
+		},
+		selectUser(tag) {
+			this.serialLoading = true;
+			const xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = () => {
+				if ( xhr.status === 200 && xhr.readyState === 4 ) {
+					const res = JSON.parse(xhr.responseText);
+					this.serial = res.data;
+					this.serialLoading = false;
+				}
+			};
+			xhr.open('get', 'https://cors-proxy.org/api/');
+			xhr.setRequestHeader('cors-proxy-url', `https://us-central1-sopia-bot.cloudfunctions.net/findSerial/${tag}`);
+			xhr.send();
+			this.acctag = tag;
+			this.dialog = false;
+			this.nickname = '';
+		},
 	},
 	data: function() {
 		return {
@@ -246,6 +369,12 @@ export default {
 				"kakao": require('@/assets/home/kakao.gif'),
 				"anydesk": require('@/assets/home/anydesk.png'),
 			},
+			dialog: false,
+			acctag: '',
+			users: [],
+			nickname: '',
+			serial: '',
+			serialLoading: false,
 		};
 	},
 }

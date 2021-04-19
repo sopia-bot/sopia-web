@@ -32,6 +32,7 @@ if ( process.argv[2] === "build" ) {
 			"/docs/bundle/now-song/",
 			"/docs/bundle/minigame/",
 			"/docs/bundle/ez-cmd/",
+			"/docs/bundle/roulette/",
 			"/docs/api/start/",
 			"/docs/api/sopia/",
 			"/docs/api/var/",

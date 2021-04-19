@@ -91,6 +91,10 @@ export default {
 					key: '/docs/bundle/ez-cmd/',
 					name: Lang('docs.bundle.ez-cmd'),
 				},
+				{
+					key: '/docs/bundle/roulette/',
+					name: Lang('docs.bundle.roulette'),
+				},
 			],
 		},
 		{

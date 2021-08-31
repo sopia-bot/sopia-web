@@ -63,6 +63,11 @@ const routes = [
 		name: 'Refresh Serial Key',
 		component: () => import('../views/RefKey.vue'),
 	},
+	{
+		path: '/demo/',
+		name: 'Demo App',
+		component: () => import('../views/Demo/Home/Index.vue'),
+	},
 ]
 
 localStorage.setItem('routes', JSON.stringify(routes));

@@ -15,146 +15,15 @@
 	"action": "동작",
 	"applying": "값을 적용합니다.",
 	"download": "다운로드",
-
-	"author": "개발자 윤군",
-	"meta.home": "No.1 매니저 소피아",
-	"meta.home.desc": "스푼 라디오 No.1 매니저 봇 소피아를 사용해 보세요.",
-
-	"meta.docs.how-to-sign": "어떻게 시리얼을 발급하나요? | 소피아 사용법",
-	"meta.docs.how-to-sign.desc": "아래 링크를 클릭해 가입 페이지로 들어갑니다. 계정 신청자가 DJ인지 매니저인지 선택합니다. 소피아가 사용될 주 방송의 DJ를 한 명 고릅니다. 하도 제대로 못 보내서 스푼 검색 시스템을 넣어놨습니다. 소피아를 사용할 계정을 선택합니다.",
-
-	"meta.docs.install": "설치하기 | 소피아 사용법",
-	"meta.docs.install.desc": "소피아는 가장 최신 버전을 사용한 걸 권장하고 있습니다. 최신 버전을 다운로드해 주세요. 소피아는 PC에서만 실행시킬 수 있습니다. Windows 시스템 기반이지만 리눅스나 Mac OS 또한 가능합니다.",
-
-	"meta.docs.manager": "간편 매니저 | 소피아 사용법",
-	"meta.docs.manager.desc": "소피아는 시리얼을 할당받아야만 사용 가능합니다.  개발자 및 운영진에게 상담해 쉽게 시리얼을 받을 수 있습니다. 시리얼을 할당받은 계정으로 스푼에 로그인 합니다. 이외의 계정은 사용할 수 없습니다.",
-
-	"meta.docs.load-setting": "설정 불러오기 | 소피아 사용법",
-	"meta.docs.load-setting.desc": "기존 사용자가 새로 업데이트 했을 때만 해당됩니다!  이전 버전 설정이 잘못 된 상태로 불러오면, 새로운 버전도 잘못됩니다.  설정이 잘 불러와 지는지 확인하고 이전 버전을 삭제해 주세요.",
-
-	"meta.docs.q.spoor-chat": "Spoor Chat 사용 | 소피아 사용법",
-	"meta.docs.q.spoor-chat.desc": "Spoon + Super Chat 의 합성어로, 유튜브의 후원기능인 Super Chat을 스푼라디오에 도입시켰습니다.  청취자가 최소 요구 스푼을 선물하고, 대기 시간 이내에 채팅을 치면 음성합성 시스템이 읽어줍니다.",
-
-	"meta.docs.home": "HOME | 소피아 사용법",
-	"meta.docs.home.desc": "라이브 정보는 로그인 한 뒤, 방송에 입장해야 수집됩니다. 라이브 및 디제이 정보가 화면에 표시되며, 오른쪽 텍스트를 클릭하면 클립보드에 복사됩니다.",
-
-	"meta.docs.ez-cmd": "쉬운 명령어 추가 | 소피아 사용법",
-	"meta.docs.ez-cmd.desc": "해당 번들과 동시에 OnOff 번들을 사용중이라면, 소피아에 오동작이 일어날 수 있습니다.  해당 번들을 사용기로 하면, OTHER 메뉴에 EZ-CMD 메뉴가 추가됩니다.  만약 추가되지 않았거나 페이지가 정상 이동하지 않을 경우 소피아 프로그램을 재시작 해야 합니다.  입장 & 하트에 대한 반응을 쉽게 설정할 수 있습니다.  설명에 존재하듯, 예약어 목록을 그대로 사용하면 정보가 변경되어 출력됩니다.",
-
-	"meta.docs.code": "CODE | 소피아 사용법",
-	"meta.docs.code.desc": "이 문서에선 CODE 탭의 설명만 진행합니다.  상세한 프로그래밍 방법은 API DOC 을 참고하세요. 소피아가 초기화 될 땐 무조건 sopia/main.js 파일을 실행시킵니다. 즉, main.js는 무조건 필요합니다.",
-
-	"meta.docs.m.spoor-chat": "Spoor Chat | 소피아 사용법",
-	"meta.docs.m.spoor-chat.desc": "간단한 사용법은 Spoor Chat 설정 문서를 참고하세요.  이 문서에선 시그니처에 대해 설명합니다.  시그니처란?  특정 단어에 대하여 DJ 본인의 음성을 등록해 두면, 해당 단어의 Spoor Chat은 음성합성 시스템이 아닌 등록한 음성이 재생됩니다.",
-
-	"meta.docs.setting": "SETTING | 소피아 사용법",
-	"meta.docs.setting.desc": "자동로그인 및 소피아 설정관리 자동 매니저 멘트 시작 매니저일때만 매니저 멘트 작동 설정 불러오기 자동 로그인을 사용 설정하고, 로그인 타입을 설정한 뒤 저장하면 다음 소피아 실행시 자동 로그인이 진행됩니다.",
-
-	"meta.docs.bundle": "BUNDLE | 소피아 사용법",
-	"meta.docs.bundle.desc": "소피아가 기본적으로 제공하지 않는 편리한 기능들을 기능별로 사용할 수 있습니다. 프로그램을 업데이트하지 않아도, 번들은 업데이트 가능합니다. 매니저 라고 적혀있는 번들은, 매니저 이상의 권한을 가진 사람만 사용할 수 있습니다.",
-
-	"meta.docs.bundle.onoff": "OnOff | 소피아 번들",
-	"meta.docs.bundle.onoff.desc": "해당 번들을 설치하면 모든 반응이 off 되어있습니다.  명령어를 사용해 기능별로 on 할 수 있습니다.",
-
-	"meta.docs.bundle.loop": "반복 | 소피아 번들",
-	"meta.docs.bundle.loop.desc": "!반복 [초] [문장] 명령어를 이용하여, 원하는 문장을 일정 시간마다 반복해서 출력되도록 할 수 있습니다.  !반복 제거 또는 !반복 삭제 명령어를 이용하여, 현재 반복 중인 동작을 정지할 수 있습니다.",
-
-	"meta.docs.bundle.signature": "시그니처 | 소피아 번들",
-	"meta.docs.bundle.signature.desc": "시그니처는 에서 부가적으로 본인이 등록해야 하는 것을, 똑똑한 여러분이라면 이미 이전 글을 읽어서 알고 계실겁니다.  시그니처 번들은 등록된 시그니처 목록을 보여주는 !시그니처 명령어를 추가합니다.",
-
-	"meta.docs.bundle.song-request": "신청곡 | 소피아 번들",
-	"meta.docs.bundle.song-request.desc": "!신청곡 명령어로 현재 신청곡 목록을 확인할 수 있습니다.  !신청곡 [신청할 곡 이름] 명령어로 신청곡을 목록에 추가할 수 있습니다.  !신청곡 삭제 또는 !신청곡 제거 명령어로 가장 마지막에 추가된 신청곡을 제거할 수 있습니다. ",
-
-	"meta.docs.bundle.vote": "투표 | 소피아 번들",
-	"meta.docs.bundle.vote.desc": "!신청곡 명령어로 현재 신청곡 목록을 확인할 수 있습니다.  !신청곡 [신청할 곡 이름] 명령어로 신청곡을 목록에 추가할 수 있습니다.  !신청곡 삭제 또는 !신청곡 제거 명령어로 가장 마지막에 추가된 신청곡을 제거할 수 있습니다. ",
-
-	"meta.docs.bundle.now-song": "현재곡 | 소피아 번들",
-	"meta.docs.bundle.now-song.desc": "- Windows 에서만 동작합니다.  - 멜론 플레이어에서 재생되는 노래만 가능합니다.  !현재곡 명령어를 이용하여, 재생중인 곡의 제목 및 가수명을 알 수 있습니다.",
-
-	"meta.docs.bundle.minigame": "미니게임 | 소피아 번들",
-	"meta.docs.bundle.minigame.desc": "미니게임 디제이의 컨텐츠는 어디까지 늘어날까 1. 추첨 닉네임 노출 허락받은 사진입니다. !추첨 명령어를 이용하여, 현재 방송 목록에 있는 청취자 중 한 명을 고릅니다.",
-
-	"meta.docs.bundle.ez-cmd": "쉬운 명령어 추가 | 소피아 번들",
-	"meta.docs.bundle.ez-cmd.desc": "해당 번들과 동시에 OnOff 번들을 사용중이라면, 소피아에 오동작이 일어날 수 있습니다.  해당 번들을 사용기로 하면, OTHER 메뉴에 EZ-CMD 메뉴가 추가됩니다.  만약 추가되지 않았거나 페이지가 정상 이동하지 않을 경우 소피아 프로그램을 재시작 해야 합니다.  입장 & 하트에 대한 반응을 쉽게 설정할 수 있습니다.  설명에 존재하듯, 예약어 목록을 그대로 사용하면 정보가 변경되어 출력됩니다.",
-
-	"meta.docs.api.start": "시작하기 | API 가이드",
-	"meta.docs.api.start.desc": "사전 지식 소피아는 프로그래밍 언어 중 하나인 Javascript 를 사용했습니다. API 가이드에선 프로그래밍에 관한 설명은 없으며, 오로지 소피아가 지원하는 객체와 그 사용법에 대해서만 설명합니다. 자바스크립트 가이드는 MDN 을 참고하십시오.",
-
-	"meta.docs.api.sopia": "Sopia 객체 | API 가이드",
-	"meta.docs.api.sopia.desc": "모든 API 는 sopia 객체에서 지원합니다. 해당 객체는 EventEmitter 입니다.  sopia EventEmitter Event all 모든 라이브 이벤트 발생시 파라미터 Live Event Object 라이브 이벤트 발생시 정보 Event message 청취자가 채팅을 쳤을 때 파라미터", 
-
-	"meta.docs.api.var": "Var 객체 | API 가이드",
-	"meta.docs.api.var.desc": "해당 객체는 코드 리로딩 ( F5, 번들 설치 ) 발생시 초기화되는 객체입니다.  sopia.var :Object sopia.var.live 현재 라이브 정보 sopia.var.created 현재 라이브 시작 시간 (UTC) sopia.var._send_sopia.send 함수와 동일 사용 예제 다음 예제는 !before", 
-
-	"meta.docs.api.config": "Config 객체 | API 가이드",
-	"meta.docs.api.config.desc": "Config 객체 소피아 설정 sopia.config : Object Object sopia 소피아 설정 정보 하위 변수 Autostart Boolean 소피아 자동 시작 Onlymanager Boolean 매니저일때만 매니저 멘트 작동 Limitoff Boolean 소피아 글자수 제한 넘어갈 시 100글자씩 나누어 전송", 
-
-	"meta.docs.api.itv": "Itv 객체 | API 가이드",
-	"meta.docs.api.itv.desc": " Itv 객체 일정 시간마다 반복 작업 수행 sopia.itv : Object Function add 반복 작업 추가 파라미터 Key String 반복 작업 이름 Func Function 반복 작업을 수행할 함수 Time Number 반복 시간 ( Ms 단위 )", 
-
-	"meta.docs.api.inject": "스크립트 삽입 | API 가이드",
-	"meta.docs.api.inject.desc": "프로그램이 로딩되기 전, 로딩 중, 로딩 완료 세 단계에 따른 커스텀 스크립트를 삽입할 수 있습니다.  해당 기능은 sopia/inject 폴더 안에 있는 스크립트를 파일 이름 순으로 정렬한 뒤, 순차적으로 실행합니다. 프로그램 로딩 전 호출되는 함수 정확히 Head 태그가 로딩될 때 호출됩니다.", 
-
-
-	"home.introduce": "당신의 스푼 방송을 더 멋지게 만들어주는 매니저 프로그램",
-	"home.download": "최신 다운로드",
-	"home.google-down": "구글 드라이브",
-	"home.use-doc": "사용 방법보기",
-	
-	"intro.good-design": "깔끔하며, 눈을 뗄 수 없는 디자인이 당신을 사로잡을 겁니다.",
-	"intro.good-design2": "디자인 뿐만 아니라 사용자 경험 측면에서도 쉽게 다가갈 수 있습니다.",
-
-	"intro.free": "엄청난 자유도를 가지고 봇의 머리를 코딩할 수 있습니다.",
-	"intro.free2": "입문 장벽이 낮은 자바스크립트는 당신이 원하는 대로 할 수 있습니다.",
-
-	"intro.spoorchat": "스푼라디오에 드디어 도네이션 기능이 추가되었습니다.",
-	"intro.spoorchat2": "스푼을 후원한 청취자의 채팅을 읽는 것으로 더 재밌는 방송을 진행할 수 있습니다.",
-	"intro.spoorchat3": "특정 텍스트를 자신의 목소리로 대신 읽어주는 시그니처 기능 또한 있습니다.",
-
-	"intro.setting": "자동 로그인 기능을 포함한 몇몇 설정은 매우 간편합니다.",
-
-	"intro.bundle": "원하는 기능만 골라 사용할 수 있는 번들 기능을 제공합니다.",
-	"intro.bundle2": "프로그램을 업데이트 하지 않아도, 번들은 업데이트 할 수 있습니다.",
-
-	"intro.comunity": "커뮤니티",
-	"intro.kakao": "스푼라디오에서 가장 큰 커뮤니티라고 생각합니다.",
-	"intro.kakao2": "약 1000명의 사람들이 서로 질문하고 친목을 도모하며 교류합니다",
-
-	"intro.anydesk": "Anydesk를 사용하여 문제 해결에 도움을 드리고 있습니다.",
-	"intro.anydesk2": "어려운 문제는 원격으로 해결하세요!",
-
-
-
-	"docs.quick.start": "빠른 시작 안내",
-	"docs.quick.how-to-sign": "어떻게 시리얼을 발급하나요?",
-	"docs.quick.install": "설치하기",
-	"docs.quick.manager": "간편 매니저",
-	"docs.quick.load-setting": "설정 불러오기",
-	"docs.quick.spoor-chat": "Spoor Chat 사용",
-
-	"docs.menus": "프로그램 메뉴 안내",
-	"docs.menus.home": "HOME",
-	"docs.menus.ez-cmd": "EZ CMD",
-	"docs.menus.code": "CODE",
-	"docs.menus.spoor-chat": "SPOOR CHAT",
-	"docs.menus.setting": "SETTING",
-	"docs.menus.bundle": "BUNDLE",
-
-	"docs.bundle": "번들 안내",
-	"docs.bundle.onoff": "OnOff",
-	"docs.bundle.loop": "반복",
-	"docs.bundle.signature": "시그니처",
-	"docs.bundle.song-request": "신청곡",
-	"docs.bundle.vote": "투표",
-	"docs.bundle.now-song": "현재곡",
-	"docs.bundle.minigame": "미니게임",
-	"docs.bundle.ez-cmd": "쉬운 명령어 추가",
-
-	"docs.api": "API 가이드",
-	"docs.api.start": "시작하기",
-	"docs.api.sopia": "Sopia 객체",
-	"docs.api.var": "Var 객체",
-	"docs.api.config": "Config 객체",
-	"docs.api.itv": "Itv 객체",
-	"docs.api.inject": "스크립트 삽입"
+	"banner.description": "당신의 스푼 방송을 더 멋지게 만들어주는 매니저 프로그램",
+	"focus.title": "오로지 방송에<br>집중하세요!",
+	"focus.description": "방송 관리는 소피아가 알아서 해줄 것입니다.",
+	"focus.chat.0": "방장 바보",
+	"focus.chat.1": "방장 대머리",
+	"focus.chat.2": "강퇴하고 싶쥬? 근데 노래하느라 못 보쥬?",
+	"focus.chat.3": "매니저도 지금 없쥬? 청취자들 짜증나쥬?",
+	"focus.chat.4": "어쩔티비~ 어쩔냉장고~",
+	"focus.chat.5": "아 ㅋㅋ루삥뽕 강퇴할 수 있으면 해보라고",
+	"focus.chat.block": "불량 이용자를 강제퇴장 조치하였습니다.",
+	"focus.chat.end": "잼민이 캇-"
 }

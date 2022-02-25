@@ -7,19 +7,22 @@
 		<div class="section">
 			<focus />
 		</div>
+		<div class="section">
+			<funny/>
+		</div>
 	</full-page>
 	<!-- E:Content -->
 </template>
 <script>
 import Banner from './Banner.vue';
-import Donation from './Donation.vue';
 import Focus from './Focus.vue';
+import Funny from './Funny.vue';
 export default {
 	name: 'home',
 	components: {
 		Banner,
-		Donation,
 		Focus,
+		Funny,
 	},
 	data: () => ({
 		options: {

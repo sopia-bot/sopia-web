@@ -16,6 +16,7 @@ export default {
 		scrollFix: true,
 	}),
 	async mounted() {
+		console.log('mounted!!');
 		this.scrollAutoFix();
 		await this.$sleep(this.delay);
 		this.chatPush({

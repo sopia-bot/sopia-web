@@ -20,6 +20,18 @@
 						</p>
 					</v-col>
 				</v-row>
+        <v-row class="ma-0">
+          <v-col offset="1" cols="10" class="px-0">
+            <v-btn
+                depressed tile
+                color="indigo"
+                data-sa="from-bottom"
+                data-sa-delay="1000"
+                class="px-4"
+                @click="$evt.$emit('move-scroll', 4)"
+                dark x-large>{{ $t('download') }}</v-btn>
+          </v-col>
+        </v-row>
 			</v-col>
 		</v-row>
 	</div>

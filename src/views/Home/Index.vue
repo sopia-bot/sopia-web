@@ -10,6 +10,9 @@
 		<div class="section">
 			<funny/>
 		</div>
+    <div class="section">
+      <download/>
+    </div>
 	</full-page>
 	<!-- E:Content -->
 </template>
@@ -17,12 +20,14 @@
 import Banner from './Banner.vue';
 import Focus from './Focus.vue';
 import Funny from './Funny.vue';
+import Download from './Download.vue';
 export default {
 	name: 'home',
 	components: {
 		Banner,
 		Focus,
 		Funny,
+    Download,
 	},
 	data: () => ({
 		options: {
@@ -32,7 +37,11 @@ export default {
 	methods: {
 	},
 	mounted() {
-		SA.initHandler();
+    this.$evt.$off('move-scroll');
+    this.$evt.$on('move-scroll', (page) => {
+      this.$refs.fullpage.api.moveTo(page);
+    });
+		SA.scrollHandler();
 	},
 }
 </script>

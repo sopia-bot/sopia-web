@@ -4,7 +4,7 @@
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.SA = {}));
 })(this, (function (exports) { 'use strict';
 
-    const scrollEventHandler = () => {
+    const scrollHandler = () => {
         const saNodes = document.querySelectorAll("[data-sa]");
         const point = window.innerHeight;
         for ( const saNode of saNodes){
@@ -16,7 +16,6 @@
                 if(rect.top > point + point*(0.1)) {
                     saNode.classList.remove('show');
                 }
-                
             }
         }
     };
@@ -47,13 +46,10 @@
             }
         }    
     };
+    window.addEventListener('scroll', scrollHandler);
+    scrollHandler();
 
-    const initHandler = () => {
-        window.removeEventListener('scroll', scrollEventHandler);
-        window.addEventListener('scroll', scrollEventHandler);
-    };
-
-    exports.initHandler = initHandler;
+    exports.scrollHandler = scrollHandler;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

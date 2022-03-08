@@ -12,6 +12,7 @@ import './plugins/mixin';
 Vue.config.productionTip = false;
 Vue.use(Meta);
 Vue.use(VueFullPage);
+Vue.prototype.$evt = new Vue();
 
 new Vue({
 	router,

@@ -11,5 +11,10 @@
 	"focus.chat.block": "불량 이용자를 강제퇴장 조치하였습니다.",
 	"focus.chat.end": "잼민이 캇-",
 	"funny.title": "더 재밌게<br>방송하세요!",
-	"funny.description": "소피아에는 지금보다 더 재밌는 컨텐츠가 있습니다.<br>여러분들이 바라는 그 기능들이요."
+	"funny.description": "소피아에는 지금보다 더 재밌는 컨텐츠가 있습니다.<br>여러분들이 바라는 그 기능들이요.",
+	"download.title": "이제, 내가 선택할<br> 차례입니다.",
+	"download.description": "CHOICE.<br>당신 목소리는 완벽하단걸 더 많은 사람에게 알려주자구요.",
+	"download.latest": "최신 버전 다운로드",
+	"download.version": "버전",
+	"download": "다운로드"
 }

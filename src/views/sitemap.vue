@@ -11,7 +11,7 @@ import path from 'path';
 export default {
 	name: 'sitemap',
 	mounted: function() {
-		const url = "https://sopia-bot.github.io";
+		const url = "https://sopia.dev";
 		let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
 		xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 		if ( localStorage.routes ) {

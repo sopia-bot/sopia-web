@@ -42,5 +42,23 @@ Vue.mixin({
 		$sleep(ms) {
 			return new Promise((r) => setTimeout(r, ms));
 		},
+		mkKeyword(words) {
+			const defaultKeywords = [
+				"SOPIA",
+				"소피아",
+				"스푼 매니저",
+				"스푼 봇",
+				"스푼",
+				"스푼라디오",
+				"스푼 소피아",
+				"매니저",
+				"매크로",
+				"스푼 매크로",
+				"스푼 윤군",
+				"스푼 개발자 윤군",
+			];
+
+			return defaultKeywords.concat(words).join(", ");
+		},
 	},
 });

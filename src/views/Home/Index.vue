@@ -23,6 +23,37 @@ import Funny from './Funny.vue';
 import Download from './Download.vue';
 export default {
 	name: 'home',
+  metaInfo() {
+    return {
+      title: 'SOPIAv3',
+      htmlAttrs: {
+        lang: navigator.language,
+        dir: 'ltr',
+      },
+      meta: [
+        {charset: 'utf-8'},
+        {meta: 'description', content: this.$t('description'),},
+        {name: 'keywords', content: this.mkKeyword()},
+        {name: 'author', content: this.$t('author')},
+        {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+        {
+          property: 'og:title',
+          content: 'SOPIAv3',
+          vmid: 'og:title',
+        },
+        {
+          property: 'og:description',
+          content: this.$t('description'),
+          vmid: 'og:description',
+        },
+        {
+          property: 'og:image',
+          content: require('../../assets/icon.png'),
+          vmid: 'og:image',
+        },
+      ],
+    };
+  },
 	components: {
 		Banner,
 		Focus,

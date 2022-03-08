@@ -1,6 +1,5 @@
 const path = require('path');
 const PrerenderSpaPlugin = require('prerender-spa-plugin');
-const ansiRegex = require('ansi-regex');
 
 const plugins = [];
 
@@ -11,33 +10,6 @@ if ( process.argv[2] === "build" ) {
 		captureAfterTime: 5000,
 		routes: [
 			"/",
-			"/signin/",
-			"/refresh-key/",
-			"/release/",
-			"/docs/quick-start/how-to-sign/",
-			"/docs/quick-start/install/",
-			"/docs/quick-start/manager/",
-			"/docs/quick-start/spoor-chat/",
-			"/docs/menus/home/",
-			"/docs/menus/ez-cmd/",
-			"/docs/menus/code/",
-			"/docs/menus/spoor-chat/",
-			"/docs/menus/setting/",
-			"/docs/menus/bundle/",
-			"/docs/bundle/onoff/",
-			"/docs/bundle/loop/",
-			"/docs/bundle/signature/",
-			"/docs/bundle/song-request/",
-			"/docs/bundle/vote/",
-			"/docs/bundle/now-song/",
-			"/docs/bundle/minigame/",
-			"/docs/bundle/ez-cmd/",
-			"/docs/api/start/",
-			"/docs/api/sopia/",
-			"/docs/api/var/",
-			"/docs/api/config/",
-			"/docs/api/itv/",
-			"/docs/api/inject/",
 		],
 	}));
 }
@@ -63,6 +35,6 @@ module.exports = {
 			},
 		},
 	},
-	transpileDependencies: ["vuetify", ansiRegex],
+	transpileDependencies: ["vuetify"],
     runtimeCompiler: true,
 };

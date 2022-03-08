@@ -9,14 +9,14 @@ const routes = [
 		name: 'Home',
 		component: () => import('../views/Home/Index.vue'),
 	},
-	//{
-	//	path: '/sitemap',
-	//	name: 'Sitemap',
-	//	component: () => import('../views/sitemap.vue'),
-	//},
+	{
+		path: '/sitemap',
+		name: 'Sitemap',
+		component: () => import('../views/sitemap.vue'),
+	},
 ];
 
-//localStorage.setItem('routes', JSON.stringify(routes));
+localStorage.setItem('routes', JSON.stringify(routes));
 
 const router = new VueRouter({
 	mode: 'history',

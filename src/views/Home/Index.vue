@@ -1,6 +1,6 @@
 <template>
 	<!-- S:Content -->
-	<full-page ref="fullpage" :options="options" id="fullpage">
+	<div ref="fullpage">
 		<div class="section" style="overflow: hidden;">
 			<banner />
 		</div>
@@ -13,7 +13,7 @@
     <div class="section">
       <download/>
     </div>
-	</full-page>
+	</div>
 	<!-- E:Content -->
 </template>
 <script>
@@ -63,6 +63,7 @@ export default {
 	data: () => ({
 		options: {
 			scrollBar: true,
+			licenseKey: 'E272EB83-D1A74347-98FEBE4D-59C588A0',
 		},
 	}),
 	methods: {
@@ -70,8 +71,16 @@ export default {
 	mounted() {
     this.$evt.$off('move-scroll');
     this.$evt.$on('move-scroll', (page) => {
-      this.$refs.fullpage.api.moveTo(page);
+      window.fullpage_api.moveTo(page);
     });
+		try {
+			document.querySelector('html').className = '';
+			new window.fullpage(this.$refs.fullpage, this.options);
+		} catch {
+			document.querySelector('html').className = '';
+			new window.fullpage(this.$refs.fullpage, this.options);
+		}
+		document.querySelector('body').style.overflowX = 'hidden';
 		SA.scrollHandler();
 	},
 }

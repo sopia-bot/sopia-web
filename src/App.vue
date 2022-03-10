@@ -11,5 +11,8 @@
 
 export default {
 	name: 'App',
+	created() {
+		document.querySelector('body').style.overflowX = 'hidden';
+	}
 };
 </script>

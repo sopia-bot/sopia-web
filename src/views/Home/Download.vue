@@ -4,11 +4,13 @@
       <v-col offset="1" cols="10">
         <p
             data-sa="flip-bottom"
+			data-sa-delay="500"
             style="text-align: center;"
             class="text-h3 indigo--text text--darken-4 font-weight-bold"
             v-html="$t('download.title')"></p>
         <p
             data-sa="flip-bottom"
+			data-sa-delay="500"
             style="text-align: center;"
             class="text-subtitle2 indigo--text text--darken-4"
             v-html="$t('download.description')"></p>
